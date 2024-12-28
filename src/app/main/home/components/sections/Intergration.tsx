@@ -33,6 +33,8 @@ const Integration = () => {
                 px-20
                 pb-20
                 pt-8
+                rounded-full
+                bg-white
             "
         >
             <IconCloud iconSlugs={ICON_SLUGS} />

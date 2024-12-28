@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "antd";
 import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiVite } from "react-icons/si";
 
 const { Meta } = Card;
 
@@ -12,6 +12,7 @@ const ProjectsSection = () => {
       name: "IT Moments",
       technologies: [
         { name: "ReactJS", icon: <FaReact /> },
+        { name: "Vite", icon: <SiVite /> },
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Tailwind", icon: <SiTailwindcss /> },
       ],
@@ -24,11 +25,12 @@ const ProjectsSection = () => {
       name: "Movie Station",
       technologies: [
         { name: "ReactJS", icon: <FaReact /> },
+        { name: "Vite", icon: <SiVite /> },
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Tailwind", icon: <SiTailwindcss /> },
       ],
       duration: "Dec 2024 - Present",
-      image: "/assets/image/it-moments.png",
+      image: "/assets/image/movie-app.png",
       githubLink: "https://github.com/trhgatu/it-moments-fullstack",
       projectLink: "https://www.your-project-domain.com",
     },
@@ -58,10 +60,7 @@ const ProjectsSection = () => {
               <div
                 className="p-4 border-none"
                 style={{
-                  width: 300,
                   borderRadius: 0,
-                  boxShadow:
-                    "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;",
                 }}
               >
                 <Meta title={project.name} />
