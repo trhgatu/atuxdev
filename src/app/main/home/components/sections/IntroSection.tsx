@@ -9,9 +9,7 @@ const IntroSection = () => {
       <p className="text-lg font-medium">
         I&apos;m a passionate developer, designer, and creator. Take a look at some of my projects below.
       </p>
-
-
-      <div className="flex space-x-6 mt-6">
+      <div className="flex space-x-6 mt-6 items-center">
         <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-3xl hover:text-red-500 transition-all duration-100" />
         </a>

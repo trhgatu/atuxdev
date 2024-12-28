@@ -4,9 +4,9 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import Banner from "./main/home/components/Banner";
+import IntegrationSection from "./main/home/components/IntergrationSection";
 import ProjectSection from "./main/home/components/ProjectSection";
 import Particles from "@/components/ui/particles";
-import { Intergration } from "./main/home/components/sections/Intergration";
 
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-7xl">
       <Banner />
-      <Intergration/>
+      <IntegrationSection/>
       <ProjectSection/>
 
       <Particles
