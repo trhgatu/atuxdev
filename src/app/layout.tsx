@@ -1,6 +1,6 @@
 // app/layout.tsx
 import Header from "../shared/components/layouts/Header";
-import Footer from "../shared/components/layouts/Footer";
+/* import Footer from "../shared/components/layouts/Footer"; */
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+
       </body>
     </html>
   );

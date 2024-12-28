@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Banner from "./main/home/components/Banner";
 import ProjectSection from "./main/home/components/ProjectSection";
 import Particles from "@/components/ui/particles";
-import { Inter } from "next/font/google";
 import { Intergration } from "./main/home/components/sections/Intergration";
 
 

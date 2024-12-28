@@ -1,5 +1,3 @@
-import { BorderBeam } from "@/components/ui/border-beam";
-
 const ProjectsSection = () => {
     return (
         <section className="mt-20 px-6">
