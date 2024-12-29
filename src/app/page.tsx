@@ -18,7 +18,7 @@ export default function Home() {
   }, [resolvedTheme]);
 
   return (
-    <div className="mx-auto w-full max-w-7xl">
+    <div className="mx-auto w-full max-w-6xl">
       <Banner />
       <IntegrationSection/>
       <ProjectSection/>

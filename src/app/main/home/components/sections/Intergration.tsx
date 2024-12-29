@@ -32,7 +32,7 @@ const Integration = () => {
                 overflow-hidden
                 px-20
                 pb-20
-                pt-8
+                pt-10
                 rounded-full
                 bg-white
             "

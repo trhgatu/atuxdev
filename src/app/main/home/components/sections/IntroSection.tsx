@@ -3,7 +3,7 @@ import TypingAnimation from "@/components/ui/typing-animation";
 
 const IntroSection = () => {
   return (
-    <div className="flex flex-col items-start space-y-4 w-full md:w-1/2">
+    <div className="flex flex-col items-start space-y-6 w-full md:w-1/2">
       <span>Web Developer</span>
       <TypingAnimation className="text-7xl font-bold">Hello, I&apos;m Anh Tu</TypingAnimation>
       <p className="text-lg font-medium">

@@ -3,10 +3,26 @@ import { Card } from "antd";
 import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiVite } from "react-icons/si";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const { Meta } = Card;
 
 const ProjectsSection = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start({ width: "100%" });
+    } else {
+      controls.start({ width: "0%" });
+    }
+  }, [controls, inView]);
+
   const projects = [
     {
       name: "IT Moments",
@@ -39,7 +55,21 @@ const ProjectsSection = () => {
   return (
     <section className="mt-20 px-6">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-6">My Projects</h2>
+
+        <h2
+          ref={ref}
+          className="text-3xl flex items-center sm:text-4xl font-bold mb-6 relative"
+        >
+          Projects.
+          <motion.span
+            className="h-1 bg-black ml-4"
+            initial={{ width: 0 }}
+            animate={controls}
+            transition={{ duration: 1.5 }}
+            style={{ transformOrigin: "left" }}
+          ></motion.span>
+        </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div className="relative group" key={index}>
@@ -57,12 +87,7 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              <div
-                className="p-4 border-none"
-                style={{
-                  borderRadius: 0,
-                }}
-              >
+              <div className="p-4 border-none" style={{ borderRadius: 0 }}>
                 <Meta title={project.name} />
                 <div className="mt-2 text-gray-600">{project.duration}</div>
                 <div className="mt-2">
