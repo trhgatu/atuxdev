@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Button, Card, Tag } from "antd";
+import { Card, Tag } from "antd";
 import { GithubOutlined, LinkOutlined, AntDesignOutlined } from "@ant-design/icons";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiVite, SiMongodb } from "react-icons/si";
