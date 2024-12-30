@@ -102,8 +102,7 @@ const ProjectsSection = () => {
                     <Tag
                       key={index}
                       icon={tech.icon}
-                      color="black"
-                      className="flex items-center justify-center text-white"
+                      className="flex items-center justify-center bg-black text-white dark:bg-white dark:text-black"
                       style={{
                         padding: "4px 8px",
                         borderRadius: "10px",
@@ -113,26 +112,6 @@ const ProjectsSection = () => {
                     </Tag>
                   ))}
                 </div>
-
-                <div className="flex items-center mt-4">
-                  <Link
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-100"
-                  >
-                    <GithubOutlined />
-                  </Link>
-                  <a
-                    href={project.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-100"
-                  >
-                    <LinkOutlined />
-                  </a>
-                </div>
-
               </div>
             </div>
           ))}

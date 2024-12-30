@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import Banner from "./main/home/components/Banner";
-import IntegrationSection from "./main/home/components/IntergrationSection";
+import SkillsSection from "./main/home/components/SkillsSection";
 import ProjectSection from "./main/home/components/ProjectSection";
 import Particles from "@/components/ui/particles";
 
@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl">
       <Banner />
-      <IntegrationSection/>
+      <SkillsSection/>
       <ProjectSection/>
 
       <Particles
         className="absolute inset-0 z-0"
-        quantity={100}
-        ease={80}
+        quantity={200}
+        ease={200}
         color={color}
         refresh
       />

@@ -6,7 +6,7 @@ import Integration from "./sections/Intergration";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiTailwindcss, SiMongodb } from "react-icons/si";
 
-const IntegrationSection = () => {
+const SkillsSection = () => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -69,4 +69,4 @@ const IntegrationSection = () => {
     );
 };
 
-export default IntegrationSection;
+export default SkillsSection;
