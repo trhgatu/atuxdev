@@ -9,7 +9,7 @@ import { SiTypescript, SiJavascript, SiTailwindcss, SiMongodb } from "react-icon
 const IntegrationSection = () => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.5,
     });
 
@@ -30,7 +30,7 @@ const IntegrationSection = () => {
                 >
                     Skills.
                     <motion.span
-                        className="h-1 bg-black ml-4"
+                        className="h-1 bg-black dark:bg-white ml-4"
                         initial={{ width: 0 }}
                         animate={controls}
                         transition={{ duration: 1.5 }}
@@ -43,18 +43,18 @@ const IntegrationSection = () => {
                             These are the technologies I have utilized in my projects.
                         </p>
                         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-gray-600 text-center">
-                        {[
-                                { Icon: SiTypescript, name: "TypeScript" },
-                                { Icon: SiJavascript, name: "JavaScript" },
-                                { Icon: FaReact, name: "React" },
-                                { Icon: FaHtml5, name: "HTML5" },
-                                { Icon: FaCss3Alt, name: "CSS3" },
-                                { Icon: SiTailwindcss, name: "TailwindCSS" },
-                                { Icon: FaNodeJs, name: "Node.js" },
-                                { Icon: SiMongodb, name: "MongoDB" },
-                            ].map(({ Icon, name }, index) => (
+                            {[
+                                { Icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
+                                { Icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
+                                { Icon: FaReact, name: "React", color: "#61DBFB" },
+                                { Icon: FaHtml5, name: "HTML5", color: "#E34F26" },
+                                { Icon: FaCss3Alt, name: "CSS3", color: "#1572B6" },
+                                { Icon: SiTailwindcss, name: "TailwindCSS", color: "#38BDF8" },
+                                { Icon: FaNodeJs, name: "Node.js", color: "#8CC84B" },
+                                { Icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+                            ].map(({ Icon, name, color }, index) => (
                                 <div key={index} className="flex flex-col items-center">
-                                    <Icon className="h-6 w-6 sm:h-8 sm:w-8 mb-2" />
+                                    <Icon className="h-6 w-6 sm:h-8 sm:w-8 mb-2" style={{ color }} />
                                     <p className="text-xs sm:text-sm">{name}</p>
                                 </div>
                             ))}

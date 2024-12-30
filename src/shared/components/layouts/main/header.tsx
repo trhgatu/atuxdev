@@ -1,6 +1,6 @@
 // components/Header.tsx
 import Link from "next/link";
-
+import { ModeToggle } from "../../darkmode-toggle";
 const Header = () => {
   return (
     <header className="bg-transparent py-4">
@@ -11,13 +11,16 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-6 items-center">
             <li>
+              <ModeToggle />
+            </li>
+            <li>
               <Link href="/" className="hover:text-gray-300">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/project" className="hover:text-gray-300">
-                Project
+              <Link href="/projects" className="hover:text-gray-300">
+                Projects
               </Link>
             </li>
             <li>

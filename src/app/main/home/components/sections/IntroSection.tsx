@@ -1,11 +1,14 @@
 import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import TypingAnimation from "@/components/ui/typing-animation";
-
+import Link from "next/link";
 const IntroSection = () => {
   return (
     <div className="flex flex-col items-start space-y-6 w-full md:w-1/2">
       <span>Web Developer</span>
-      <TypingAnimation className="text-7xl font-bold">Hello, I&apos;m Anh Tu</TypingAnimation>
+      <TypingAnimation className="text-7xl font-bold h-36 overflow-hidden">
+        Hello, I&apos;m Anh Tu
+      </TypingAnimation>
+
       <p className="text-lg font-medium">
         I&apos;m a passionate developer, designer, and creator. Take a look at some of my projects below.
       </p>
@@ -20,12 +23,12 @@ const IntroSection = () => {
           <FaInstagram className="text-3xl hover:text-red-500 transition-all duration-100" />
         </a>
 
-        <a
+        <Link
           href="/projects"
           className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300"
         >
           <span>See all Project</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
