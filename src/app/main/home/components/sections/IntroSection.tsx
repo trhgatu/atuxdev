@@ -26,10 +26,11 @@ const IntroSection = () => {
 
         <Link
           href="/projects"
-          className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300"
+          className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 z-10"
         >
           <span>See all Project</span>
         </Link>
+
       </div>
     </div>
   );
