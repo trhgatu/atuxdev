@@ -3,8 +3,8 @@ import AvatarSection from "./sections/AvatarSection";
 
 const Banner = () => {
   return (
-    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
-      <div className=" relative z-10 flex items-center justify-between w-full px-6 md:flex-row flex-col-reverse md:space-x-8">
+    <div className="flex h-[calc(100vh-120px)] w-full flex-col items-center justify-center">
+      <div className="z-10 flex items-center justify-between w-full px-6 md:flex-row flex-col-reverse md:space-x-8">
         <IntroSection />
         <AvatarSection />
       </div>
