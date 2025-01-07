@@ -1,6 +1,6 @@
 import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import TypingAnimation from "@/components/ui/typing-animation";
-import Link from "next/link";
+
 
 const IntroSection = () => {
   return (
