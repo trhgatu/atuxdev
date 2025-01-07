@@ -3,9 +3,10 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-import Banner from "./main/home/components/Banner";
-import SkillsSection from "./main/home/components/SkillsSection";
-import ProjectSection from "./main/home/components/ProjectSection";
+import BannerSection from "./main/home/components/banner-section";
+import IntegrationSection from "./main/home/components/integration-section";
+import ProjectsSection from "./main/home/components/project-section";
+import AboutSection from "./main/home/components/sections/about-section";
 import Particles from "@/components/ui/particles";
 
 
@@ -19,10 +20,10 @@ export default function Home() {
 
   return (
     <div className="mx-auto w-full max-w-6xl">
-      <Banner />
-      <SkillsSection/>
-      <ProjectSection/>
-
+      <BannerSection/>
+      <AboutSection/>
+      <IntegrationSection/>
+      <ProjectsSection/>
       <Particles
         className="absolute inset-0 z-0"
         quantity={200}

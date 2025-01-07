@@ -4,15 +4,11 @@ import TypingAnimation from "@/components/ui/typing-animation";
 
 const IntroSection = () => {
   return (
-    <div className="flex flex-col items-start space-y-6 w-full md:w-1/2 pt-8">
+    <div className="flex flex-col items-start space-y-6 w-full md:w-1/2">
       <span className="w-full text-3xl">Web Developer</span>
       <TypingAnimation>
         Hello, I&apos;m Anh Tu
       </TypingAnimation>
-
-      <p className="text-lg font-medium">
-        I&apos;m a passionate developer, designer, and creator. Take a look at some of my projects below.
-      </p>
       <div className="flex space-x-6 mt-6 items-center">
         <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-3xl hover:text-red-500 transition-all duration-100" />

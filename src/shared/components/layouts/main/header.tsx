@@ -28,6 +28,9 @@ const Header = () => {
                 Projects
               </Link>
             </li>
+            <Link href="/changelog" className="hover:text-gray-300">
+                Changelog
+              </Link>
             <li>
               <Link
                 href="/work-with-me"

@@ -1,10 +1,10 @@
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Integration from "./sections/Intergration";
+import Integration from "./sections/integration-section";
 
 
-const SkillsSection = () => {
+const IntegrationSection = () => {
     const controls = useAnimation();
     const inView = useInView({
         triggerOnce: true,
@@ -20,16 +20,14 @@ const SkillsSection = () => {
     }, [controls, inView]);
 
     return (
-        <section className="mt-20 px-4 sm:px-6 md:mt-20">
-            <div className="container mx-auto">
-                <div className="flex flex-col lg:flex-row justify-evenly items-centerp-6 sm:p-8 rounded-lg">
+        <section className="mx-auto">
+                <div className="flex flex-col lg:flex-row justify-evenly items-center p-6 sm:p-8 rounded-lg">
                     <div className="w-full max-w-md lg:pl-8">
                         <Integration />
                     </div>
                 </div>
-            </div>
         </section>
     );
 };
 
-export default SkillsSection;
+export default IntegrationSection;
