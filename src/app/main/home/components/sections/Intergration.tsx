@@ -11,7 +11,6 @@ const ICON_SLUGS = [
     "nodedotjs",
     "express",
     "nextdotjs",
-    "amazonaws",
     "firebase",
     "nginx",
     "vercel",
@@ -19,7 +18,6 @@ const ICON_SLUGS = [
     "git",
     "github",
     "gitlab",
-    "visualstudiocode",
     "figma",
 ];
 

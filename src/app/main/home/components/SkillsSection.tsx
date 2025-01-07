@@ -1,14 +1,12 @@
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Integration from "./sections/Intergration";
 
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiTailwindcss, SiMongodb } from "react-icons/si";
 
 const SkillsSection = () => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({
+    const inView = useInView({
         triggerOnce: true,
         threshold: 0.5,
     });

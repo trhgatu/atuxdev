@@ -5,7 +5,7 @@ const AvatarSection = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="items-center">
+    <div className="items-center flex justify-center max-w-full">
       <ShineBorder
         borderRadius={9999}
         borderWidth={4}
