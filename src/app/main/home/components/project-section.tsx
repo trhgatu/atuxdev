@@ -96,10 +96,10 @@ const ProjectsSection = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">
+                      <CarouselPrevious className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">
                         Prev
                       </CarouselPrevious>
-                      <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">
+                      <CarouselNext className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full">
                         Next
                       </CarouselNext>
                     </Carousel>
