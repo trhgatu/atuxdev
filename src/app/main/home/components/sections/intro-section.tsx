@@ -9,17 +9,7 @@ const IntroSection = () => {
       <TypingAnimation>
         Hello, I&apos;m Anh Tu
       </TypingAnimation>
-      <div className="flex space-x-6 mt-6 items-center">
-        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-3xl hover:text-red-500 transition-all duration-100" />
-        </a>
-        <a href="https://facebook.com/your-facebook" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="text-3xl hover:text-red-500 transition-all duration-100" />
-        </a>
-        <a href="https://instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="text-3xl hover:text-red-500 transition-all duration-100" />
-        </a>
-      </div>
+
     </div>
   );
 };

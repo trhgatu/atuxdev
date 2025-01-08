@@ -4,26 +4,10 @@ import { Card, Tag } from "antd";
 import { AntDesignOutlined } from "@ant-design/icons";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiVite, SiMongodb } from "react-icons/si";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const { Meta } = Card;
 
 const ProjectsSection = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({ width: "100%" });
-    } else {
-      controls.start({ width: "0%" });
-    }
-  }, [controls, inView]);
-
   const projects = [
     {
       name: "IT Moments",
@@ -63,7 +47,7 @@ const ProjectsSection = () => {
         <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <p className="dark:bg-white bg-black text-white text-2xl w-1/2 p-2 md:text-5xl font-bold dark:text-black">
-              Projects.
+              Projects
             </p>
           </div>
         </div>
