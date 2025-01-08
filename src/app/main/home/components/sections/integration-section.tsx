@@ -26,6 +26,7 @@ const Integration = () => {
         <div className="flex flex-wrap justify-center"
         >
             <IconCloud iconSlugs={ICON_SLUGS} />
+
         </div>
     );
 }
