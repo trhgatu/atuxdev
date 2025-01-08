@@ -33,10 +33,10 @@ const Header = () => {
               </Link>
             <li>
               <Link
-                href="/work-with-me"
+                href="/get-in-touch"
                 className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300"
               >
-                Work with me
+                Get in touch
               </Link>
             </li>
           </ul>

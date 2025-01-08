@@ -59,23 +59,15 @@ const ProjectsSection = () => {
 
   return (
     <section className="mt-20 px-6">
-      <div className="container mx-auto">
-
-        <h2
-          ref={ref}
-          className="text-3xl flex items-center sm:text-4xl font-bold mb-6 relative"
-        >
-          Projects.
-          <motion.span
-            className="h-1 bg-black dark:bg-white ml-4"
-            initial={{ width: 0 }}
-            animate={controls}
-            transition={{ duration: 1.5 }}
-            style={{ transformOrigin: "left" }}
-          ></motion.span>
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto max-w-5xl ">
+        <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <p className="dark:bg-white bg-black text-white text-2xl w-1/2 p-2 md:text-5xl font-bold dark:text-black">
+              Projects.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           {projects.map((project, index) => (
             <div className="relative group" key={index}>
               <div
