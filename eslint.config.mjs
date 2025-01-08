@@ -13,10 +13,11 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off', // Tắt cảnh báo về biến không sử dụng
+      '@typescript-eslint/no-explicit-any': 'off', // Tắt cảnh báo về kiểu `any`
     },
-    ignores: [
-      "components/ui/**",
+    ignorePatterns: [
+      "components/ui/**", // Bỏ qua thư mục ui
     ],
   }
 ];
