@@ -8,6 +8,7 @@ import IntegrationSection from "./main/home/components/integration-section";
 import ProjectsSection from "./main/home/components/project-section";
 import AboutSection from "./main/home/components/sections/about-section";
 import Particles from "@/components/ui/particles";
+import { ChangelogSection } from "./main/home/components/sections/changelog-section";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <AboutSection/>
       <IntegrationSection/>
       <ProjectsSection/>
+      <ChangelogSection/>
       <Particles
         className="absolute inset-0 z-0"
         quantity={200}

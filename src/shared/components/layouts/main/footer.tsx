@@ -1,10 +1,12 @@
 // components/Footer.tsx
 import Link from "next/link";
+import { Divider } from "antd";
 import { FaGithub, FaFacebook, FaInstagram, FaCoffee } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="mx-auto py-10 mt-10">
+      <Divider className="dark:bg-slate-100" />
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Column 1: Navigation */}
         <div>
@@ -67,7 +69,7 @@ const Footer = () => {
 
         {/* Column 3: Support My Work */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Support My Work</h3>
+          <h3 className="text-lg font-bold mb-4">Support my work</h3>
           <p className="mb-4">If you like my work, consider buying me a coffee!</p>
           <a
             href="https://www.buymeacoffee.com/"

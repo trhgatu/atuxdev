@@ -1,4 +1,3 @@
-import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import { TextAnimate } from "@/components/ui/text-animate";
 
 

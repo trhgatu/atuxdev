@@ -24,16 +24,8 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-gray-300">
-                Projects
-              </Link>
-            </li>
-            <Link href="/changelog" className="hover:text-gray-300">
-                Changelog
-              </Link>
-            <li>
               <Link
-                href="/get-in-touch"
+                href="mailto:trananhtu1112003@gmail.com"
                 className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300"
               >
                 Get in touch

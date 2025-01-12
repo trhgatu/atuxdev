@@ -59,7 +59,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="mt-20 px-6">
+    <section className="mt-20 mx-auto">
       <div className="container mx-auto max-w-5xl">
         <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 text-center md:text-left">
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
 
             return (
               <div className="relative group" key={index}>
-                <Card className="project-card border-2 p-2">
+                <Card className="project-card border border-slate-200">
                   <CardHeader>
                     <CardTitle>{project.name}</CardTitle>
                     <CardDescription>{project.duration}</CardDescription>
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
                         <TooltipProvider key={index}>
                           <Tooltip>
                             <TooltipTrigger>
-                              <div className="h-10 w-10 transition-all duration-200 p-2 hover:opacity-40 bg-slate-200 dark:bg-slate-200 dark:text-black rounded-full">
+                              <div className="h-10 w-10 transition-all duration-200 p-2 hover:opacity-40 bg-gray-100 dark:text-black rounded-full">
                                 {tech.icon}
                               </div>
                             </TooltipTrigger>
@@ -140,15 +140,6 @@ const ProjectsSection = () => {
               </div>
             );
           })}
-        </div>
-        <div className="flex justify-center mt-8">
-          <Link
-            href="/projects"
-            className="flex items-center space-x-2 px-40 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-200"
-            passHref
-          >
-            <span>View All</span>
-          </Link>
         </div>
       </div>
     </section>
