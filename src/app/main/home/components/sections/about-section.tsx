@@ -10,19 +10,17 @@ export default function AboutSection() {
                     </p>
                     <p className="mt-6 text-lg md:text-xl leading-relaxed dark:text-white">
                         Hi, I’m <span className="font-semibold text-red-400 dark:text-red-600">Anh Tu</span>.
-                        I’m passionate about <span className="italic">web development</span> and dedicated to
-                        <span className="italic"> building efficient, scalable, and innovative solutions for modern challenges</span>.
+                        I’m passionate about <span className="italic">web development</span> and aspire to
+                        <span className="italic"> become a full-stack developer</span>.
                     </p>
                     <p className="mt-4 dark:text-white leading-relaxed">
-                        I specialize in frontend development using <span className="font-medium text-blue-400 dark:text-blue-600">React</span>,
-                        <span className="font-medium text-blue-400 dark:text-blue-600"> Next.js</span>, and
-                        <span className="font-medium text-blue-400 dark:text-blue-600"> TypeScript</span>, as well as backend integration with
-                        <span className="font-medium text-green-400 dark:text-green-600"> Node.js</span> and
-                        <span className="font-medium text-green-400 dark:text-green-600"> RESTful APIs</span>.
+                        I have experience in frontend development using Next.js,
+                        React, and TypeScript, as well as backend development with Node.js and MongoDB.
+                        My goal is to build scalable, efficient, and user-centric applications that solve real-world problems.
                     </p>
                     <p className="mt-4 dark:text-white leading-relaxed">
-                        I’m always eager to learn about emerging technologies, improve my craft, and collaborate with
-                        like-minded professionals to create impactful projects.
+                        I’m always eager to expand my knowledge, embrace challenges, and collaborate with
+                        others to deliver impactful projects.
                     </p>
                 </div>
             </div>

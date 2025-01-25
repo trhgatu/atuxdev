@@ -7,7 +7,6 @@ import BannerSection from "./main/home/components/banner-section";
 import IntegrationSection from "./main/home/components/integration-section";
 import ProjectsSection from "./main/home/components/project-section";
 import AboutSection from "./main/home/components/sections/about-section";
-import Particles from "@/components/ui/particles";
 import { ChangelogSection } from "./main/home/components/sections/changelog-section";
 
 
@@ -20,19 +19,12 @@ export default function Home() {
   }, [resolvedTheme]);
 
   return (
-    <div className="mx-auto w-full max-w-6xl">
+    <div className="mx-auto w-full">
       <BannerSection/>
       <AboutSection/>
       <IntegrationSection/>
-      <ProjectsSection/>
       <ChangelogSection/>
-      <Particles
-        className="absolute inset-0 z-0"
-        quantity={200}
-        ease={200}
-        color={color}
-        refresh
-      />
+      <ProjectsSection/>
     </div>
   );
 }

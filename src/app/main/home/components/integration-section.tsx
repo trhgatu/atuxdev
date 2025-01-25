@@ -20,7 +20,7 @@ const IntegrationSection = () => {
     }, [controls, inView]);
 
     return (
-        <section className="mx-auto">
+        <section className="mx-auto z-50">
                 <div className="flex flex-col lg:flex-row justify-evenly items-center p-6 sm:p-8 rounded-lg">
                     <div className="w-full max-w-md lg:pl-8">
                         <Integration />

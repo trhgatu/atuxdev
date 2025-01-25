@@ -1,5 +1,7 @@
 import IntroSection from "./sections/intro-section";
 import AvatarSection from "./sections/avatar-section";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 
 const BannerSection = () => {
   return (
@@ -8,6 +10,16 @@ const BannerSection = () => {
         <IntroSection />
         <AvatarSection />
       </div>
+      <AnimatedGridPattern
+        numSquares={60}
+        maxOpacity={0.3}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
     </div>
   );
 };
