@@ -59,12 +59,12 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="mt-20">
+    <section className="mt-20 px-8">
       <div className="container mx-auto max-w-5xl">
         <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <p className="dark:bg-white bg-black text-white text-2xl w-1/2 p-2 md:text-5xl font-bold dark:text-black">
-              Projects
+              Projects.
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ export function ChangelogSection() {
             content: (
                 <div>
                     <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8 dark:text-white">
-                         working as a collaborator at CyberSkill. This has been an excellent environment for me to grow my professional skills and expand my practical knowledge.
+                        I'm working as a collaborator at CyberSkill. This has been an excellent environment for me to grow my professional skills and expand my practical knowledge.
                     </p>
                 </div>
             ),
@@ -19,7 +19,7 @@ export function ChangelogSection() {
             title: '2024',
             content: (
                 <div>
-                    <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8 dark:text-white">
+                    <p className=" mb-8 dark:text-white">
                         In 2024, I completed an internship at CyberSkill. During this time, I gained hands-on experience, adapted to a real-world work environment, and learned invaluable lessons.
                     </p>
                 </div>
@@ -48,10 +48,12 @@ export function ChangelogSection() {
     ];
 
     return (
-        <div className="mt-20 mx-auto max-w-5xl">
-            <Card className='border border-slate-200'>
-                <Timeline data={data} />
-            </Card>
+        <div className="mt-20 px-8">
+            <div className='max-w-5xl mx-auto'>
+                <Card className='border border-slate-200'>
+                    <Timeline data={data} />
+                </Card>
+            </div>
         </div>
     );
 }

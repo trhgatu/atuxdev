@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-transparent py-4 z-50">
       <div className="container mx-auto flex items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-bold hover:scale-105 transition-all duration-100">trhgatu</Link>
+          <Link href="/" className="text-2xl font-bold hover:scale-105 transition-all hover:text-red-500 duration-100">trhgatu</Link>
         </div>
 
         <nav className="hidden md:flex">
