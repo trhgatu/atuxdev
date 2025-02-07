@@ -77,7 +77,9 @@ export default {
   			grid: 'grid 15s linear infinite',
   			meteor: 'meteor 5s linear infinite',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
   			grid: {
@@ -185,6 +187,22 @@ export default {
   				'90%': {
   					bottom: '50%',
   					right: '25%'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
   		}

@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import BannerSection from "./main/home/components/banner-section";
-import IntegrationSection from "./main/home/components/integration-section";
+import TechStackSection from "@/src/app/main/home/components/tech-stack-section";
 import ProjectsSection from "./main/home/components/project-section";
 import AboutSection from "./main/home/components/sections/about-section";
 import { ChangelogSection } from "./main/home/components/sections/changelog-section";
@@ -22,7 +22,7 @@ export default function Home() {
     <div className="mx-auto w-full">
       <BannerSection/>
       <AboutSection/>
-      <IntegrationSection/>
+      <TechStackSection/>
       <ChangelogSection/>
       <ProjectsSection/>
     </div>
