@@ -53,8 +53,8 @@ const ProjectsSection = () => {
         "/assets/image/movie-app-2.png",
         "/assets/image/movie-app-3.png",
       ],
-      githubLink: "https://github.com/trhgatu/Movie-Station",
-      projectLink: "https://movie-station-jet.vercel.app/",
+      githubLink: "https://github.com/trhgatu/movie-station-website",
+      projectLink: "https://movie-station-website.vercel.app/home",
     },
   ];
 
