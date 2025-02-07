@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Timeline } from '@/src/shared/components/landing/time-line';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import { AuroraText } from '@/components/ui/aurora-text';
 
 export function ChangelogSection() {
     const data = [
@@ -9,7 +10,7 @@ export function ChangelogSection() {
             title: 'Currently',
             content: (
                 <div>
-                    <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8 dark:text-white">
+                    <p className=" mb-8 dark:text-white">
                         I'm working as a collaborator at CyberSkill. This has been an excellent environment for me to grow my professional skills and expand my practical knowledge.
                     </p>
                 </div>
@@ -29,18 +30,8 @@ export function ChangelogSection() {
             title: '2021 - 2023',
             content: (
                 <div>
-                    <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8 dark:text-white">
+                    <p className=" mb-8 dark:text-white">
                         From 2021 to 2023, I was a student at Ho Chi Minh University of Industry and Trade (HUIT). This was a pivotal time for me to focus on learning, participating in team projects, and nurturing my passion for programming.
-                    </p>
-                </div>
-            ),
-        },
-        {
-            title: 'Changelog',
-            content: (
-                <div>
-                    <p className="text-neutral-800 text-xs md:text-sm font-normal mb-4 dark:text-white">
-                        Below is a summary of the significant milestones in my journey of learning and growth. I am committed to continuous improvement and lifelong learning.
                     </p>
                 </div>
             ),
@@ -51,6 +42,11 @@ export function ChangelogSection() {
         <div className="mt-20 px-8">
             <div className='max-w-5xl mx-auto'>
                 <Card className='border border-slate-200'>
+                    <div className='mx-auto container p-10'>
+                        <h1 className="text-4xl text-center font-bold tracking-tighter md:text-5xl lg:text-7xl">
+                            My <AuroraText>Journey.</AuroraText>
+                        </h1>
+                    </div>
                     <Timeline data={data} />
                 </Card>
             </div>
