@@ -19,12 +19,12 @@ export default function Home() {
   }, [resolvedTheme]);
 
   return (
-    <div className="mx-auto w-full">
+    <>
       <BannerSection/>
       <AboutSection/>
       <TechStackSection/>
       <ChangelogSection/>
       <ProjectsSection/>
-    </div>
+    </>
   );
 }

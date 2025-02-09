@@ -5,9 +5,11 @@ export default function AboutSection() {
         <section className="py-16 px-8">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
                 <div className="w-full md:w-1/2 text-center md:text-left">
-                    <p className="dark:bg-white bg-black text-white text-2xl w-1/2 p-2 md:text-5xl font-bold dark:text-black">
-                        About me.
-                    </p>
+                    <div className="w-44 bg-black">
+                        <p className="dark:bg-white text-white text-2xl p-2 md:text-3xl font-bold dark:text-black">
+                            About me.
+                        </p>
+                    </div>
                     <p className="mt-6 text-lg md:text-xl leading-relaxed dark:text-white">
                         Hi, I’m <span className="font-semibold text-red-400 dark:text-red-600">Anh Tu</span>.
                         I’m passionate about <span className="italic">web development</span> and aspire to

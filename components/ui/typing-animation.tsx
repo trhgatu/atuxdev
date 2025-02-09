@@ -13,7 +13,7 @@ interface TypingAnimationProps extends MotionProps {
   startOnView?: boolean;
 }
 
-export default function TypingAnimation({
+export function TypingAnimation({
   children,
   className,
   duration = 100,
@@ -79,7 +79,7 @@ export default function TypingAnimation({
     <MotionComponent
       ref={elementRef}
       className={cn(
-        "text-6xl md:text-8xl overflow-hidden sm:h-48 h-48 font-bold leading-[5rem] tracking-[-0.02em]",
+        "text-4xl font-bold leading-[5rem] tracking-[-0.02em]",
         className,
       )}
       {...props}
