@@ -4,7 +4,7 @@ import { Timeline } from '@/src/shared/components/landing/time-line';
 import { Card } from "@/components/ui/card";
 import { AuroraText } from '@/components/ui/aurora-text';
 
-export function ChangelogSection() {
+const ChangelogSection= () => {
     const data = [
         {
             title: 'Currently',
@@ -53,3 +53,4 @@ export function ChangelogSection() {
         </div>
     );
 }
+export default ChangelogSection

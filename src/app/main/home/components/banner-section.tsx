@@ -1,5 +1,5 @@
-import IntroSection from "./sections/intro-section";
-import AvatarSection from "./sections/avatar-section";
+import IntroSection from "@/src/app/main/home/components/sections/banner-components/intro-section";
+import AvatarSection from "@/src/app/main/home/components/sections/banner-components/avatar-section";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 

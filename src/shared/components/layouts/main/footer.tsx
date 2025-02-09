@@ -11,10 +11,10 @@ const Footer = () => {
 
         {/* Column 1: Brand */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-xl font-semibold">Made with ❤️ by trhgatu</h3>
-          <p className="text-sm text-gray-400 mt-2">
-            Building awesome projects, one line at a time.
-          </p>
+          <h3 className="text-xl font-semibold">Made by trhgatu</h3>
+          <blockquote className="mt-6 border-l-2 pl-6 italic">
+            "Building awesome projects, one line at a time."
+          </blockquote>
         </div>
 
         {/* Column 2: Social */}
@@ -23,7 +23,7 @@ const Footer = () => {
           <ul className="flex space-x-5 mt-3">
             <li>
               <a
-                href="https://github.com/"
+                href="https://github.com/trhgatu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-black dark:hover:text-white transition duration-300"
@@ -33,7 +33,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/trhgatu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition duration-300"
@@ -43,7 +43,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://instagram.com/"
+                href="https://instagram.com/th_atu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-500 transition duration-300"

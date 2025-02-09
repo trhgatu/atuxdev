@@ -1,7 +1,7 @@
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import TechStack from "@/src/app/main/home/components/sections/tech-stack";
+import TechStack from "@/src/app/main/home/components/sections/tech-stack-components/tech-stack";
 
 const TechStackSection = () => {
     const controls = useAnimation();

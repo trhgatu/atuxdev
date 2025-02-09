@@ -1,13 +1,13 @@
 import { Marquee } from "@/components/ui/marquee";
 import StackIcon from "tech-stack-icons";
-import { useTheme } from "next-themes";
+
+
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Badge } from "antd";
 
 const technologies = [
     { name: "HTML5", icon: <StackIcon name="html5" /> },
