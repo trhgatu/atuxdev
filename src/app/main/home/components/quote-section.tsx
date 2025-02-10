@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 
 const quotes = [
-  { text: "Stay hungry, stay foolish.", author: "Steve Jobs" },
-  { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
-  { text: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
-  { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+  { text: "Any sufficiently advanced technology is indistinguishable from magic.", author: "Arthur C. Clarke" },
+  { text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
+  { text: "It's not a bug. It's an undocumented feature!", author: "Unknown" },
+  { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+  { text: "Talk is cheap. Show me the code.", author: "Linus Torvalds" },
+  { text: "The computer was born to solve problems that did not exist before.", author: "Bill Gates" },
 ];
 
 const QuoteSection = () => {

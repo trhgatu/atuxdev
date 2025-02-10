@@ -10,17 +10,17 @@ export default function AboutSection() {
                             About me.
                         </p>
                     </div>
-                    <p className="mt-6 text-lg md:text-xl leading-relaxed dark:text-white">
-                        Hi, I’m <span className="font-semibold text-red-400 dark:text-red-600">Anh Tu</span>.
+                    <p className="mt-6  dark:text-white">
+                        Hi, I’m <span className="font-semibold text-red-600 dark:text-red-600">Anh Tu</span>.
                         I’m passionate about <span className="italic">web development</span> and aspire to
                         <span className="italic"> become a full-stack developer</span>.
                     </p>
-                    <p className="mt-4 dark:text-white leading-relaxed">
+                    <p className="mt-4 dark:text-white">
                         I have experience in frontend development using Next.js,
                         React, and TypeScript, as well as backend development with Node.js and MongoDB.
                         My goal is to build scalable, efficient, and user-centric applications that solve real-world problems.
                     </p>
-                    <p className="mt-4 dark:text-white leading-relaxed">
+                    <p className="mt-4 dark:text-white">
                         I’m always eager to expand my knowledge, embrace challenges, and collaborate with
                         others to deliver impactful projects.
                     </p>

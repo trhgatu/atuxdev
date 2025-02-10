@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const BannerSection = () => {
   return (
     <div className="flex mt-10 w-full flex-col items-center justify-center">
-      <div className="z-10 px-8 relative flex items-center justify-center w-full max-w-5xl md:flex-row flex-col-reverse md:space-x-8">
+      <div className="z-10 relative flex items-center justify-center w-full max-w-5xl md:flex-row flex-col-reverse md:space-x-8">
         <IntroSection />
         <AvatarSection />
       </div>
