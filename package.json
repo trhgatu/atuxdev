@@ -33,7 +33,9 @@
         "react-intersection-observer": "^9.14.0",
         "tailwind-merge": "^2.6.0",
         "tailwindcss-animate": "^1.0.7",
-        "tech-stack-icons": "^2.1.0"
+        "tech-stack-icons": "^2.1.0",
+        "axios": "^1.7.9",
+        "swr": "^2.3.2"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3",
