@@ -1,11 +1,11 @@
-import IntroSection from "@/src/app/main/home/components/sections/banner-components/intro-section";
-import AvatarSection from "@/src/app/main/home/components/sections/banner-components/avatar-section";
+import IntroSection from "@/src/app/(main)/home/components/sections/banner-components/intro-section";
+import AvatarSection from "@/src/app/(main)/home/components/sections/banner-components/avatar-section";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 
 const BannerSection = () => {
   return (
-    <div className="flex mt-10 w-full flex-col items-center justify-center">
+    <div className="flex pt-12 w-full flex-col items-center justify-center">
       <div className="z-10 relative flex items-center justify-center w-full max-w-5xl md:flex-row flex-col-reverse md:space-x-8">
         <IntroSection />
         <AvatarSection />

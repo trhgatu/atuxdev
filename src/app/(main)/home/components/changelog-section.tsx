@@ -39,7 +39,7 @@ const ChangelogSection= () => {
     ];
 
     return (
-        <div className="mt-20 px-8">
+        <div className="px-8">
             <div className='max-w-5xl mx-auto'>
                 <Card className='border border-slate-200'>
                     <div className='mx-auto container p-10'>

@@ -1,4 +1,5 @@
 import { TextAnimate } from "@/components/ui/text-animate";
+import { TypeAnimation } from "react-type-animation";
 
 
 const IntroSection = () => {
@@ -14,7 +15,15 @@ const IntroSection = () => {
       </TextAnimate>
 
       <span className="mt-10 uppercase text-slate-600 dark:text-slate-300 tracking-widest max-w-prose">
-        A Passionate Web Developer
+        A Passionate <TypeAnimation
+          sequence={
+            [
+              "Web Developer", 3000,
+              "Software Developer", 3000
+            ]
+          }
+          cursor={true}
+          repeat={Infinity} />
       </span>
     </div>
 

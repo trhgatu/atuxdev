@@ -1,7 +1,4 @@
 // app/layout.tsx
-import Header from "@/src/shared/components/layouts/main/header";
-import Footer from "@/src/shared/components/layouts/main/footer";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -13,9 +10,9 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -23,9 +20,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class">
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>

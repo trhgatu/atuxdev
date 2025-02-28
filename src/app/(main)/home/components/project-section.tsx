@@ -31,7 +31,7 @@ const ProjectsSection = () => {
   if (!projects.length) return <p>No projects found.</p>;
 
   return (
-    <section className="mt-20 px-8">
+    <section id="projects" className="px-8">
       <div className="container mx-auto max-w-5xl">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <div className="w-44">

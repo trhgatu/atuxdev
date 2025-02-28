@@ -1,7 +1,7 @@
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import TechStack from "@/src/app/main/home/components/sections/tech-stack-components/tech-stack";
+import TechStack from "@/src/app/(main)/home/components/sections/tech-stack-components/tech-stack";
 
 const TechStackSection = () => {
     const controls = useAnimation();
@@ -19,7 +19,7 @@ const TechStackSection = () => {
     }, [controls, inView]);
 
     return (
-        <section className="py-16 px-8">
+        <section className="px-8">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <div className="w-44">
