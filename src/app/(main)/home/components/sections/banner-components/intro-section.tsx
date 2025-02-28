@@ -7,7 +7,7 @@ const IntroSection = () => {
     <div className="mt-10 flex flex-col md:items-start items-center space-y-6 w-full md:w-1/2">
       <span className="text-6xl text-left sm:text-center">Hello, I&apos;m</span>
       <TextAnimate
-        className="text-6xl sm:text-7xl md:text-9xl sm:text-center font-bold text-red-500"
+        className="text-6xl sm:text-7xl md:text-9xl sm:text-center font-bold text-red-600"
         animation="blurIn"
         as="h1"
       >

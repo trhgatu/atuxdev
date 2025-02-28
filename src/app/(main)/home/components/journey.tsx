@@ -4,7 +4,7 @@ import { Timeline } from '@/src/shared/components/landing/time-line';
 import { Card } from "@/components/ui/card";
 import { AuroraText } from '@/components/ui/aurora-text';
 
-const ChangelogSection= () => {
+const JourneySection = () => {
     const data = [
         {
             title: 'Currently',
@@ -41,7 +41,7 @@ const ChangelogSection= () => {
     return (
         <div className="px-8">
             <div className='max-w-5xl mx-auto'>
-                <Card className='border border-slate-200'>
+                <Card>
                     <div className='mx-auto container p-10'>
                         <h1 className="text-4xl text-center font-bold tracking-tighter md:text-5xl lg:text-7xl">
                             My <AuroraText>Journey.</AuroraText>
@@ -53,4 +53,4 @@ const ChangelogSection= () => {
         </div>
     );
 }
-export default ChangelogSection
+export default JourneySection;

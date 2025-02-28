@@ -4,7 +4,7 @@ import Footer from "@/src/shared/components/layouts/main/footer"
 
 export function MainLayout({ children }: LayoutProps) {
     return (
-        <div>
+        <div className="h-screen">
             <Header />
             <main className="flex-grow" style={{ marginTop: "var(--header-height)" }}>
                 {children}

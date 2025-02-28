@@ -1,11 +1,11 @@
 "use client";
 
 import BannerSection from "@/src/app/(main)/home/components/banner-section";
-import TechStackSection from "@/src/app/(main)/home/components/tech-stack-section";
 import ProjectsSection from "@/src/app/(main)/home/components/project-section";
 import AboutSection from "@/src/app/(main)/home/components/sections/about-components/about-section";
-import ChangelogSection from "@/src/app/(main)/home/components/changelog-section";
+import JourneySection from "@/src/app/(main)/home/components/journey";
 import QuoteSection from "@/src/app/(main)/home/components/quote-section";
+import MySkills from "@/src/app/(main)/home/components/my-skills";
 
 export function HomePage() {
   return (
@@ -16,16 +16,13 @@ export function HomePage() {
       <section id="quote">
         <QuoteSection />
       </section>
-      <section id="about">
-        <AboutSection />
+      <section className="pt-28" id="skills">
+        <MySkills />
       </section>
-      <section className="pt-20" id="skills">
-        <TechStackSection />
+      <section className="pt-28" id="journey">
+        <JourneySection />
       </section>
-      <section className="pt-20" id="journey">
-        <ChangelogSection />
-      </section>
-      <section className="pt-20" id="projects">
+      <section className="pt-28" id="projects">
         <ProjectsSection />
       </section>
 

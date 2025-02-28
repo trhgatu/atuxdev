@@ -5,7 +5,6 @@ import { Project } from "@/src/shared/types/project";
 import Link from "next/link";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { GrView } from "react-icons/gr";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
@@ -31,11 +30,11 @@ const ProjectsSection = () => {
   if (!projects.length) return <p>No projects found.</p>;
 
   return (
-    <section id="projects" className="px-8">
+    <section className="px-8">
       <div className="container mx-auto max-w-5xl">
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <div className="w-44">
-            <p className="dark:bg-white bg-black text-white text-2xl md:w-full p-2 md:text-3xl font-bold dark:text-black">
+        <div className="w-full flex justify-center text-center md:text-left">
+          <div className="w-64">
+            <p className="dark:bg-white bg-black text-white text-2xl md:w-full p-2 md:text-5xl font-bold dark:text-black">
               Projects.
             </p>
           </div>
@@ -43,7 +42,7 @@ const ProjectsSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-6">
           {projects.map((project: Project, index) => (
             <div className="relative group" key={index}>
-              <Card className="project-card border border-slate-200">
+              <Card className="project-card">
                 <CardHeader>
                   <CardTitle>{project.name}</CardTitle>
                   <CardDescription>{project.duration}</CardDescription>
@@ -94,14 +93,6 @@ const ProjectsSection = () => {
                   >
                     <FaGithub />
                     <span className="font-medium">Github</span>
-                  </Link>
-                  <Link
-                    className="px-4 py-2 bg-black dark:bg-white dark:text-black hover:opacity-70 transition-all duration-200 text-white rounded-md flex items-center space-x-2"
-                    href={`project/${project.slug}`}
-                    passHref
-                  >
-                    <GrView />
-                    <span className="font-medium">See detail</span>
                   </Link>
                   <Link
                     className="px-4 py-2 bg-black dark:bg-white dark:text-black hover:opacity-70 transition-all duration-200 text-white rounded-md flex items-center space-x-2"
