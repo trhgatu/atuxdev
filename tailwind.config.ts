@@ -79,7 +79,8 @@ export default {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			shine: 'shine var(--duration) infinite linear',
   			marquee: 'marquee var(--duration) infinite linear',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+            shimmer: 'shimmer 2s linear infinite'
   		},
   		keyframes: {
   			grid: {
@@ -119,6 +120,14 @@ export default {
   					'background-position': '0% 0%'
   				}
   			},
+            shimmer: {
+                '0%': {
+                    transform: 'translateX(-100%)'
+                },
+                '100%': {
+                    transform: 'translateX(100%)'
+                }
+            },
   			'aurora-border': {
   				'0%, 100%': {
   					borderRadius: '37% 29% 27% 27% / 28% 25% 41% 37%'
