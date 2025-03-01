@@ -12,18 +12,24 @@ export default function AboutSection() {
 
     return (
         <section ref={ref} className="py-16 px-8 relative">
-            {/* Background decoration */}
             <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-red-500/10 to-rose-500/5 rounded-full blur-3xl -z-10"></div>
             <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-red-600/10 to-orange-500/5 rounded-full blur-3xl -z-10"></div>
 
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                <div className="w-full md:w-1/2 text-center md:text-left">
+                <div className="w-full md:w-1/2 md:text-left">
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-white text-4xl md:text-6xl font-bold">About me.</h2>
+                        <motion.p
+                            className="text-white text-4xl md:text-6xl font-bold"
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            About me.
+                        </motion.p>
                         <motion.div
                             initial={{ scaleX: 0 }}
                             animate={{ scaleX: isInView ? 1 : 0 }}

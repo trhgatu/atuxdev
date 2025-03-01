@@ -101,8 +101,9 @@ const JourneySection = () => {
                     <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 shadow-xl hover:shadow-red-900/10 transition-all duration-300 hover:scale-[1.02]">
                         <h4 className="text-xl font-bold mb-2 text-white">Student at <span className="text-red-500">Ho Chi Minh University of Industry and Trade</span></h4>
                         <p className="mb-4 text-gray-300">
-                            Pursued a degree in Computer Science with a focus on web development and software engineering.
+                            Studied Information Technology with a focus on web development and software engineering.
                         </p>
+
                         <div className="relative h-40 w-full mb-4 overflow-hidden rounded-lg">
                             <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent z-10"></div>
                             <div className="absolute inset-0 bg-gray-900/50 z-10"></div>
@@ -117,7 +118,7 @@ const JourneySection = () => {
                                 }}
                             />
                             <div className="absolute bottom-0 left-0 p-4 z-20">
-                                <p className="text-white font-medium">HUIT Campus</p>
+                                <p className="text-white font-medium">HUIT</p>
                                 <p className="text-sm text-gray-300">Where my journey began</p>
                             </div>
                         </div>
@@ -192,7 +193,7 @@ const JourneySection = () => {
                     className="relative z-10"
                 >
                     <Card className="bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border-gray-800 overflow-hidden shadow-xl hover:shadow-red-900/20 transition-all duration-300">
-                        <div className='mx-auto container p-6 md:p-10'>
+                        <div className='mx-auto bg-black container p-6 md:p-10'>
                             <Timeline data={data} />
                         </div>
                     </Card>
