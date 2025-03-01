@@ -10,12 +10,12 @@ const Header = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false); // Đóng menu sau khi cuộn
+      setMobileMenuOpen(false);
     }
   };
 
   return (
-    <header className="bg-transparent z-50 fixed top-0 left-0 w-full backdrop-blur-md"
+    <header className="bg-background/40 z-50 fixed top-0 left-0 w-full backdrop-blur-md"
       style={{ height: "var(--header-height)" }}>
       <div className="py-4">
         <div className="container max-w-5xl mx-auto flex items-center justify-between px-4">
@@ -35,12 +35,6 @@ const Header = () => {
                 </li>
               ))}
               <li><ModeToggle /></li>
-              <li>
-                <Link href="mailto:trananhtu1112003@gmail.com"
-                  className="flex items-center space-x-2 px-6 py-2 border-2 border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300">
-                  Get in touch
-                </Link>
-              </li>
             </ul>
           </nav>
 

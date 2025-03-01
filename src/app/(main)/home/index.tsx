@@ -10,19 +10,16 @@ import MySkills from "@/src/app/(main)/home/components/my-skills";
 export function HomePage() {
   return (
     <>
-      <section id="banner">
+      <section id="banner" className="h-screen">
         <BannerSection />
       </section>
-      <section id="quote">
-        <QuoteSection />
-      </section>
-      <section className="pt-28" id="skills">
+      <section className="md:py-20 py-10 bg-[#202020]" id="skills">
         <MySkills />
       </section>
-      <section className="pt-28" id="journey">
+      <section className="py-28" id="journey">
         <JourneySection />
       </section>
-      <section className="pt-28" id="projects">
+      <section className="py-28 bg-[#202020]" id="projects">
         <ProjectsSection />
       </section>
 

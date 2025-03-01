@@ -1,5 +1,5 @@
 import ShineBorder from "@/components/ui/shine-border";
-
+import Image from "next/image";
 const AvatarSection = () => {
 
   return (
@@ -11,10 +11,12 @@ const AvatarSection = () => {
         color={["#880808", "#EE4B2B", "	#A52A2A"]}
         className="w-10 h-10 sm:w-24 sm:h-24 md:w-96 md:h-96"
       >
-        <img
+        <Image
           src="/assets/image/tu2.jpg"
           alt="Anh Tu"
-          className="w-full h-full object-cover rounded-full"
+          width={300}
+          height={300}
+          className="rounded-full h-full w-full object-cover"
         />
       </ShineBorder>
     </div>
