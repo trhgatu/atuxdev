@@ -65,8 +65,8 @@ const AvatarSection = () => {
             <Image
               src="/assets/image/tu2.jpg"
               alt="Anh Tu"
-              width={300}
-              height={300}
+              width={600}
+              height={600}
               className="rounded-full h-full w-full object-cover"
               priority
             />
