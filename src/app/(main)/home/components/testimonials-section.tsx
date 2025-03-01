@@ -47,14 +47,13 @@ const TestimonialsSection = () => {
 
   return (
     <section ref={ref} className="px-6 py-16 relative">
-      {/* Background decoration */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-red-500/10 to-rose-500/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-red-600/10 to-orange-500/5 rounded-full blur-3xl -z-10"></div>
 
       <div className="flex max-w-5xl flex-col gap-10 mx-auto">
         <div className="w-full">
           <motion.p
-            className="text-4xl md:text-6xl font-bold"
+            className="text-4xl md:text-6xl font-bold text-white"
             initial={{ opacity: 0, y: -10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
