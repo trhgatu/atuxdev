@@ -75,7 +75,7 @@ const IntroSection = () => {
       >
         <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://linkedin.com/in/trhgatu1103" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 hover:border-blue-600/50 transition-all duration-300">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-blue-600/50 hover:border-blue-600/50 transition-all duration-300">
               <FaLinkedin className="text-2xl text-blue-600" />
             </div>
           </Link>
@@ -83,7 +83,7 @@ const IntroSection = () => {
 
         <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://github.com/trhgatu" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 hover:border-gray-500/50 transition-all duration-300">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:hover:border-gray-500/50 dark:border-gray-800 hover:border-gray-500/50 transition-all duration-300">
               <FaGithub className="text-2xl text-gray-900 dark:text-gray-100" />
             </div>
           </Link>
@@ -91,7 +91,7 @@ const IntroSection = () => {
 
         <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://instagram.com/th_atu" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-pink-500/50 hover:border-pink-500/50 transition-all duration-300">
               <FaInstagram className="text-2xl text-pink-500" />
             </div>
           </Link>
@@ -99,7 +99,7 @@ const IntroSection = () => {
 
         <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://facebook.com/trhgatu" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 hover:border-blue-700/50 transition-all duration-300">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-blue-700/50 hover:border-blue-700/50 transition-all duration-300">
               <FaFacebook className="text-2xl text-blue-700" />
             </div>
           </Link>
