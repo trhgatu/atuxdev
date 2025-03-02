@@ -8,7 +8,7 @@ import { useRef } from 'react';
 
 export default function AboutSection() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
         <section ref={ref} className="py-16 px-8 relative">
