@@ -9,6 +9,7 @@ const AvatarSection = () => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
+
     >
       <div className="relative">
         <motion.div
@@ -58,19 +59,14 @@ const AvatarSection = () => {
           color={["#880808", "#EE4B2B", "#A52A2A"]}
           className="w-10 h-10 sm:w-24 sm:h-24 md:w-96 md:h-96"
         >
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Image
-              src="/assets/image/tu2.jpg"
-              alt="Anh Tu"
-              width={600}
-              height={600}
-              className="rounded-full h-full w-full object-cover"
-              priority
-            />
-          </motion.div>
+          <Image
+            src="/assets/image/tu2.jpg"
+            alt="Anh Tu"
+            width={600}
+            height={600}
+            className="rounded-full h-full w-full object-cover"
+            priority
+          />
         </ShineBorder>
 
         <motion.div

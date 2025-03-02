@@ -46,7 +46,7 @@ const categories = {
 
 const Skills = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     const skillsByCategory = skills.reduce((acc, skill) => {
         if (!acc[skill.category]) {
