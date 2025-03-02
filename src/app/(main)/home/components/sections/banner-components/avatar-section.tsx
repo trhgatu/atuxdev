@@ -24,34 +24,6 @@ const AvatarSection = () => {
             repeatType: "reverse"
           }}
         />
-
-        <motion.div
-          className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-red-500"
-          animate={{
-            y: [0, -10, 0],
-            x: [0, 5, 0]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-10 -left-10 w-6 h-6 rounded-full bg-gradient-to-r from-red-500 to-red-600"
-          animate={{
-            y: [0, 10, 0],
-            x: [0, -5, 0]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            repeatType: "reverse",
-            delay: 1
-          }}
-        />
-
         <ShineBorder
           borderRadius={9999}
           borderWidth={6}
