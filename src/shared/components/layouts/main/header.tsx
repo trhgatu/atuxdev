@@ -9,7 +9,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  // Scroll progress indicator
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -17,14 +16,11 @@ const Header = () => {
     restDelta: 0.001
   });
 
-  // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Determine active section based on scroll position
-      const sections = ["banner", "skills", "journey", "projects"];
-      const scrollPosition = window.scrollY + 100; // Offset to trigger slightly before reaching section
+      const sections = ["banner", "about", "skills", "journey", "projects"];
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -41,13 +37,9 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Set viewport height for mobile browsers
   useEffect(() => {
-    // First we get the viewport height and we multiply it by 1% to get a value for a vh unit
     const setVh = () => {
       const vh = window.innerHeight * 0.01;
-      // Then we set the value in the --vh custom property to the root of the document
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
@@ -152,9 +144,8 @@ const Header = () => {
         style={{ scaleX }}
       />
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-background/40 backdrop-blur-sm"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-background/40 backdrop-blur-sm"
+          }`}
         style={{ height: "var(--header-height)" }}
       >
         <div className="py-4">
@@ -167,7 +158,7 @@ const Header = () => {
             {/* Desktop menu */}
             <nav className="hidden md:flex">
               <ul className="flex space-x-6 items-center">
-                {["projects", "journey", "skills"].map((section) => (
+                {["about", "skills", "journey", "projects"].map((section) => (
                   <li key={section}>
                     <button
                       onClick={() => scrollToSection(section)}
@@ -188,14 +179,7 @@ const Header = () => {
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/resume" className="relative py-1 px-2 overflow-hidden group">
-                    <span className="relative z-10 transition-colors duration-300 group-hover:text-red-500">
-                      Resume
-                    </span>
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
-                  </Link>
-                </li>
+
                 <li><ModeToggle /></li>
               </ul>
             </nav>
@@ -208,19 +192,16 @@ const Header = () => {
             >
               <div className="relative w-6 h-5">
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMobileMenuOpen ? "rotate-45 top-2" : "rotate-0 top-0"
-                  }`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "rotate-45 top-2" : "rotate-0 top-0"
+                    }`}
                 />
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMobileMenuOpen ? "opacity-0" : "opacity-100"
-                  } top-2`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                    } top-2`}
                 />
                 <span
-                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                    isMobileMenuOpen ? "-rotate-45 top-2" : "rotate-0 top-4"
-                  }`}
+                  className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "-rotate-45 top-2" : "rotate-0 top-4"
+                    }`}
                 />
               </div>
             </button>
@@ -299,9 +280,8 @@ const Header = () => {
                           whileHover={{ x: 5 }}
                           whileTap={{ scale: 0.98 }}
                           onClick={() => scrollToSection(section)}
-                          className={`w-full text-left py-3 px-4 rounded-lg transition-colors duration-200 flex items-center ${
-                            activeSection === section ? "bg-accent text-red-500" : "hover:bg-accent"
-                          }`}
+                          className={`w-full text-left py-3 px-4 rounded-lg transition-colors duration-200 flex items-center ${activeSection === section ? "bg-accent text-red-500" : "hover:bg-accent"
+                            }`}
                         >
                           <span className="text-lg font-medium">
                             {section.charAt(0).toUpperCase() + section.slice(1)}

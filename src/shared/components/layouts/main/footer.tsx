@@ -6,7 +6,6 @@ import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="mx-auto py-10 mt-10 max-w-5xl">
-      <Divider className="dark:bg-slate-300" />
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
 
         {/* Column 1: Brand */}
@@ -25,34 +24,34 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Follow Me</h3>
           <ul className="flex space-x-5 mt-3">
             <li>
-              <a
+              <Link
                 href="https://github.com/trhgatu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-black dark:hover:text-white transition duration-300"
               >
                 <FaGithub size={26} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.facebook.com/trhgatu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition duration-300"
               >
                 <FaFacebook size={26} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://instagram.com/th_atu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-500 transition duration-300"
               >
                 <FaInstagram size={26} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
