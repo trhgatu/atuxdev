@@ -43,10 +43,8 @@ const Header = () => {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    // Initial set
     setVh();
 
-    // Update on resize and orientation change
     window.addEventListener('resize', setVh);
     window.addEventListener('orientationchange', setVh);
 
@@ -56,7 +54,6 @@ const Header = () => {
     };
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -77,7 +74,6 @@ const Header = () => {
     }
   };
 
-  // Animation variants
   const menuVariants = {
     closed: {
       x: "100%",
@@ -155,7 +151,6 @@ const Header = () => {
                 trhgatu
               </Link>
             </div>
-            {/* Desktop menu */}
             <nav className="hidden md:flex">
               <ul className="flex space-x-6 items-center">
                 {["about", "skills", "journey", "projects"].map((section) => (
@@ -184,7 +179,6 @@ const Header = () => {
               </ul>
             </nav>
 
-            {/* Mobile menu button */}
             <button
               className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
@@ -207,7 +201,6 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile menu overlay with AnimatePresence */}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
@@ -231,7 +224,6 @@ const Header = () => {
             )}
           </AnimatePresence>
 
-          {/* Mobile menu with AnimatePresence */}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
@@ -272,7 +264,7 @@ const Header = () => {
 
                   <div className="flex-1 py-8 px-6 overflow-y-auto dark:bg-[#202020] bg-white">
                     <motion.div className="space-y-1">
-                      {["projects", "journey", "skills"].map((section, index) => (
+                      {["about", "skills", "journey","projects"].map((section, index) => (
                         <motion.button
                           key={section}
                           variants={itemVariants}
@@ -308,17 +300,6 @@ const Header = () => {
                       >
                         <Link href="/blog" className="flex items-center">
                           <span className="text-lg font-medium">Blog</span>
-                        </Link>
-                      </motion.div>
-                      <motion.div
-                        variants={itemVariants}
-                        custom={4}
-                        whileHover={{ x: 5 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full text-left py-3 px-4 rounded-lg hover:bg-accent transition-colors duration-200"
-                      >
-                        <Link href="/resume" className="flex items-center">
-                          <span className="text-lg font-medium">Resume</span>
                         </Link>
                       </motion.div>
                     </motion.div>
