@@ -241,11 +241,9 @@ const Header = () => {
                     <div className="flex justify-between items-center">
                       <div>
                         <div className="text-2xl font-bold text-red-500">trhgatu</div>
-                        <div className="text-sm mt-1 text-muted-foreground">Portfolio & Blog</div>
+                        <div className="text-sm mt-1 text-muted-foreground">Portfolio</div>
                       </div>
                       <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
                         onClick={() => setMobileMenuOpen(false)}
                         className="p-2 rounded-full hover:bg-accent transition-colors duration-200"
                         aria-label="Close menu"
@@ -260,13 +258,11 @@ const Header = () => {
 
                   <div className="flex-1 py-8 px-6 overflow-y-auto dark:bg-[#202020] bg-white">
                     <motion.div className="space-y-1">
-                      {["about", "skills", "journey","projects"].map((section, index) => (
+                      {["about", "skills", "journey", "projects"].map((section, index) => (
                         <motion.button
                           key={section}
                           variants={itemVariants}
                           custom={index}
-                          whileHover={{ x: 5 }}
-                          whileTap={{ scale: 0.98 }}
                           onClick={() => scrollToSection(section)}
                           className={`w-full text-left py-3 px-4 rounded-lg transition-colors duration-200 flex items-center ${activeSection === section ? "bg-accent text-red-500" : "hover:bg-accent"
                             }`}
@@ -309,23 +305,20 @@ const Header = () => {
                         <ModeToggle />
                       </div>
 
-                      <motion.div
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
+
+                      <Link
+                        href="mailto:trananhtu1112003@gmail.com"
+                        className="w-full flex items-center justify-center px-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300 shadow-md"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
-                        <Link
-                          href="mailto:trananhtu1112003@gmail.com"
-                          className="w-full flex items-center justify-center px-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300 shadow-md"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          <span className="mr-2">Get in touch</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                          </svg>
-                        </Link>
-                      </motion.div>
+                        <span className="mr-2">Get in touch</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      </Link>
                     </motion.div>
+
                   </div>
 
                   <motion.div
@@ -333,7 +326,7 @@ const Header = () => {
                     className="p-6 border-t border-border mt-auto dark:bg-[#202020] bg-white"
                   >
                     <div className="text-sm text-muted-foreground">
-                      © 2023 trhgatu
+                      © 2025 trhgatu
                     </div>
                   </motion.div>
                 </div>
