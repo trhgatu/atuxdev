@@ -122,7 +122,7 @@ const Skills = () => {
                                     <motion.div key={skill.name} variants={itemVariants}>
                                         <Tooltip>
                                             <TooltipTrigger asChild>
-                                                <Card className={`hover:shadow-xl transition-all duration-300 hover:scale-[1.05] bg-white/5 dark:bg-gray-900/20 hover:shadow-red-900/20 backdrop-blur-sm dark:border-gray-800 overflow-hidden group relative ${getCategoryHoverEffect(category)}`}>
+                                                <Card className={`hover:shadow-xl transition-all duration-300 hover:scale-[1.05] bg-white/5 dark:bg-gray-900/20 hover:shadow-red-900/20 dark:border-gray-800 overflow-hidden group relative ${getCategoryHoverEffect(category)}`}>
                                                     <div className="absolute inset-0 overflow-hidden">
                                                         <div className="absolute -inset-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shimmer"></div>
                                                     </div>
