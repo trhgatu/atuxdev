@@ -44,7 +44,7 @@ const ProjectsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl"
           >
-            A showcase of my recent work and projects I've contributed to.
+            A showcase of my recent work and projects I&apos;ve contributed to.
           </motion.p>
         </div>
         <motion.div

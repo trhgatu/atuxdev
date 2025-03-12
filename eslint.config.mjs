@@ -16,10 +16,12 @@ const eslintConfig = [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
     },
-    ignorePatterns: [
-      "components/ui/**",
-    ],
   }
 ];
 
-export default eslintConfig;
+export default [
+  ...eslintConfig,
+  {
+    ignores: ["components/ui/**"]
+  }
+];

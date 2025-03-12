@@ -44,8 +44,8 @@ export default function AboutSection() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <p className="mt-6 text-slate-200">
-                            Hi, I'm <span className="font-semibold text-red-600">Anh Tu</span>.
-                            I'm passionate about <span className="italic">web development</span> and aspire to
+                            Hi, I&apos;m <span className="font-semibold text-red-600">Anh Tu</span>.
+                            I&apos;m passionate about <span className="italic">web development</span> and aspire to
                             <span className="italic"> become a full-stack developer</span>.
                         </p>
 
@@ -80,7 +80,7 @@ export default function AboutSection() {
 
                         <p className="mt-6 text-slate-200">
                             My goal is to build scalable, efficient, and user-centric applications that solve real-world problems.
-                            I'm always eager to expand my knowledge, embrace challenges, and collaborate with
+                            I&apos;m always eager to expand my knowledge, embrace challenges, and collaborate with
                             others to deliver impactful projects.
                         </p>
 

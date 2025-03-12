@@ -33,7 +33,7 @@ const MySkills = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl"
                     >
-                        Technologies and tools I've worked with and am proficient in.
+                        Technologies and tools I&apos;ve worked with and am proficient in.
                     </motion.p>
                 </div>
                 <motion.div

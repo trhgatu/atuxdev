@@ -4,7 +4,6 @@ import BannerSection from "@/src/app/(main)/home/components/banner-section";
 import ProjectsSection from "@/src/app/(main)/home/components/project-section";
 import AboutSection from "@/src/app/(main)/home/components/sections/about-components/about-section";
 import JourneySection from "@/src/app/(main)/home/components/journey";
-import QuoteSection from "@/src/app/(main)/home/components/quote-section";
 import MySkills from "@/src/app/(main)/home/components/my-skills";
 import TestimonialsSection from "@/src/app/(main)/home/components/testimonials-section";
 

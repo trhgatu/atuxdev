@@ -15,7 +15,7 @@ const Footer = () => {
             <span className="text-red-600 ml-1">trhgatu</span>
           </span>
           <blockquote className="mt-6 border-l-2 pl-6 italic">
-            "Building awesome projects, one line at a time."
+            &quot;Building awesome projects, one line at a time.&quot;
           </blockquote>
         </div>
 

@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-muted-foreground max-w-2xl"
           >
-            Here's what people are saying about my work and collaboration.
+            Here&apos;s what people are saying about my work and collaboration.
           </motion.p>
         </div>
 
