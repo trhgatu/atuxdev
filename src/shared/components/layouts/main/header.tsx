@@ -2,19 +2,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ModeToggle } from "../../darkmode-toggle";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,8 +74,8 @@ const Header = () => {
       opacity: 0,
       transition: {
         type: "spring",
-        stiffness: 400,
-        damping: 40
+        stiffness: 250,
+        damping: 25
       }
     },
     open: {
@@ -89,10 +83,8 @@ const Header = () => {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 300,
-        damping: 30,
-        staggerChildren: 0.07,
-        delayChildren: 0.2
+        stiffness: 200,
+        damping: 20,
       }
     }
   };

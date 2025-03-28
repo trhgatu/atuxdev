@@ -1,5 +1,4 @@
 import { HomePage } from '.';
-import SideNavigation from './components/side-navigation';
 
 export const metadata = {
     title: 'Tran Hoang Anh Tu - Web Developer',
@@ -12,7 +11,6 @@ export const metadata = {
 function HomePageRoute() {
     return (
         <>
-            <SideNavigation />
             <HomePage />
         </>
     );
