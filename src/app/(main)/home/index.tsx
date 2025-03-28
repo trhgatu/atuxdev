@@ -5,7 +5,6 @@ import ProjectsSection from "@/src/app/(main)/home/components/project-section";
 import AboutSection from "@/src/app/(main)/home/components/sections/about-components/about-section";
 import JourneySection from "@/src/app/(main)/home/components/journey";
 import MySkills from "@/src/app/(main)/home/components/my-skills";
-import TestimonialsSection from "@/src/app/(main)/home/components/testimonials-section";
 
 export function HomePage() {
   return (
@@ -24,9 +23,6 @@ export function HomePage() {
       </section>
       <section className="py-28" id="projects">
         <ProjectsSection />
-      </section>
-      <section className="py-28 bg-[#202020]" id="testimonials">
-        <TestimonialsSection />
       </section>
     </>
   );
