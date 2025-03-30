@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import ListProjects from "@/src/app/(main)/home/components/sections/list-projects-components/list-projects";
+import ListProjects from "@/app/(main)/home/components/list-projects/list-projects";
 
-const ProjectsSection = () => {
+const Projects = () => {
   const ref = useRef(null);
 
   return (
@@ -46,4 +46,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default Projects;

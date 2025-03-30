@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/components/ui/button";
 import { useTheme } from "next-themes";
 
 export function ModeToggle() {

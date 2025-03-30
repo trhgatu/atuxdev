@@ -22,6 +22,6 @@ const eslintConfig = [
 export default [
   ...eslintConfig,
   {
-    ignores: ["components/ui/**"]
+    ignores: ["src/shared/components/ui/**"]
   }
 ];

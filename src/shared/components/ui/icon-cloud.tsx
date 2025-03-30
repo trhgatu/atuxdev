@@ -91,7 +91,6 @@ export default function IconCloud({
   }, [data, theme]);
 
   return (
-    // @ts-ignore
     <Cloud {...cloudProps}>
       <>
         <>{renderedIcons}</>

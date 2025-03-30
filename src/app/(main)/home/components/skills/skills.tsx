@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/shared/components/ui/card";
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/shared/components/ui/tooltip";
 import StackIcon from "tech-stack-icons";
 
 type Skill = {
@@ -46,7 +45,6 @@ const categories = {
 
 const Skills = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-100px" });
 
     const skillsByCategory = skills.reduce((acc, skill) => {
         if (!acc[skill.category]) {

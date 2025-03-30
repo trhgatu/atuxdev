@@ -1,4 +1,4 @@
-import { TextAnimate } from "@/components/ui/text-animate";
+import { TextAnimate } from "@/shared/components/ui/text-animate";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -10,18 +10,40 @@ const oswald = Oswald({
   weight: ['400', '700'],
 });
 
-const IntroSection = () => {
+const Intro = () => {
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+
   return (
-    <div
+    <motion.div
       className="mt-10 flex flex-col md:items-start items-center space-y-6 w-full md:w-1/2"
+      variants={container}
+      initial="hidden"
+      animate="show"
     >
-      <span
+      <motion.span
         className={`${oswald.className} font-light text-6xl text-left sm:text-center`}
+        variants={item}
       >
         Hello, I&apos;m
-      </span>
+      </motion.span>
 
-      <div>
+      <motion.div variants={item}>
         <TextAnimate
           className={`${oswald.className} text-6xl sm:text-7xl md:text-9xl sm:text-center font-semibold text-red-600`}
           animation="blurIn"
@@ -29,9 +51,10 @@ const IntroSection = () => {
         >
           Anh Tu
         </TextAnimate>
-      </div>
+      </motion.div>
 
-      <span
+      <motion.span
+        variants={item}
         className="mt-10 uppercase text-slate-600 dark:text-slate-300 tracking-widest max-w-prose"
       >
         A Passionate{" "}
@@ -46,43 +69,44 @@ const IntroSection = () => {
           repeat={Infinity}
           className="text-red-500 font-medium"
         />
-      </span>
+      </motion.span>
 
-      <div
+      <motion.div
+        variants={item}
         className="flex space-x-6 mt-6"
       >
-        <div>
+        <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://linkedin.com/in/trhgatu1103" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-blue-600/50 hover:border-blue-600/50 transition-all duration-300">
               <FaLinkedin className="text-2xl text-blue-600" />
             </div>
           </Link>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://github.com/trhgatu" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:hover:border-gray-500/50 dark:border-gray-800 hover:border-gray-500/50 transition-all duration-300">
               <FaGithub className="text-2xl text-gray-900 dark:text-gray-100" />
             </div>
           </Link>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://instagram.com/th_atu" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-pink-500/50 hover:border-pink-500/50 transition-all duration-300">
               <FaInstagram className="text-2xl text-pink-500" />
             </div>
           </Link>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div whileHover={{ y: -5, scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link href="https://facebook.com/trhgatu" target="_blank" rel="noopener noreferrer">
             <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-400 dark:border-gray-800 dark:hover:border-blue-700/50 hover:border-blue-700/50 transition-all duration-300">
               <FaFacebook className="text-2xl text-blue-700" />
             </div>
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div>
         <div
@@ -98,8 +122,8 @@ const IntroSection = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default IntroSection;
+export default Intro;

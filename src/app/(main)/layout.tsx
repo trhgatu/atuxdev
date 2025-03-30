@@ -1,5 +1,5 @@
-import { LayoutProps } from "@/src/shared/models";
-import { MainLayout } from "@/src/shared/components/layouts/main";
+import { LayoutProps } from "@/shared/models";
+import { MainLayout } from "@/shared/components/layouts";
 
 export default function Layout({children}: LayoutProps) {
   return (

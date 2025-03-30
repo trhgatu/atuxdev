@@ -1,4 +1,4 @@
-import SideNavigation from '@/src/shared/components/side-navigation';
+import SideNavigation from '@/shared/components/side-navigation';
 import { HomePage } from '.';
 
 export const metadata = {

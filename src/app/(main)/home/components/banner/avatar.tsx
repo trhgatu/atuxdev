@@ -1,8 +1,8 @@
-import ShineBorder from "@/components/ui/shine-border";
+import ShineBorder from "@/shared/components/ui/shine-border";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const AvatarSection = () => {
+const Avatar = () => {
   return (
     <motion.div
       className="items-center flex justify-center"
@@ -45,4 +45,4 @@ const AvatarSection = () => {
   );
 };
 
-export default AvatarSection;
+export default Avatar;

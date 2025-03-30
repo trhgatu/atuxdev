@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FaDownload, FaEnvelope, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaServer, FaDatabase } from 'react-icons/fa';
 import { useRef } from 'react';
 
-export default function AboutSection() {
+export default function About() {
     const ref = useRef(null);
 
     return (

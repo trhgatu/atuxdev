@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { Timeline } from '@/src/shared/components/landing/time-line';
-import { Card } from "@/components/ui/card";
+import { Timeline } from '@/shared/components/landing/time-line';
+import { Card } from '@/shared/components/ui/card';
 import Image from 'next/image';
 
-const JourneySection = () => {
+const Journey = () => {
     const ref = useRef(null);
 
     const data = [
@@ -180,4 +180,4 @@ const JourneySection = () => {
     );
 }
 
-export default JourneySection;
+export default Journey;

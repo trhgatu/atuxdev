@@ -1,23 +1,23 @@
 import useSWR from "swr";
-import { fetcher } from "@/src/api-client";
-import { Project } from "@/src/shared/types/project";
+import { fetcher } from "@/api-client";
+import { Project } from "@/shared/types/project";
 import Link from "next/link";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/shared/components/ui/card";
 import {
     Carousel,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
     CarouselContent,
-} from "@/components/ui/carousel";
+} from "@/shared/components/ui/carousel";
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/shared/components/ui/tooltip";
 import StackIcon from "tech-stack-icons";
 import { motion } from "framer-motion";
 

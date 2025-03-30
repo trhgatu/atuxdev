@@ -1,14 +1,14 @@
-import IntroSection from "@/src/app/(main)/home/components/sections/banner-components/intro-section";
-import AvatarSection from "@/src/app/(main)/home/components/sections/banner-components/avatar-section";
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import Intro from "./intro";
+import Avatar from "./avatar";
+import AnimatedGridPattern from "@/shared/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 
-const BannerSection = () => {
+const Banner = () => {
   return (
     <div className="flex md:pt-12 w-full flex-col items-center justify-center">
       <div className="z-10 relative flex items-center justify-center w-full max-w-5xl md:flex-row flex-col-reverse md:space-x-8">
-        <IntroSection />
-        <AvatarSection />
+        <Intro />
+        <Avatar />
       </div>
       <AnimatedGridPattern
         numSquares={60}
@@ -24,4 +24,4 @@ const BannerSection = () => {
   );
 };
 
-export default BannerSection;
+export default Banner;

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Skills from "@/src/app/(main)/home/components/sections/skills-components/skills-component";
+import Skills from "@/app/(main)/home/components/skills/skills";
 
 const MySkills = () => {
     const ref = useRef(null);
