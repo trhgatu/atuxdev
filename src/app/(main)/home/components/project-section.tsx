@@ -4,7 +4,7 @@ import ListProjects from "@/src/app/(main)/home/components/sections/list-project
 
 const ProjectsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <section ref={ref} id="projects" className="px-6 py-16 relative">
@@ -24,37 +24,28 @@ const ProjectsSection = () => {
 
       <div className="flex max-w-5xl flex-col gap-10 mx-auto">
         <div className="w-full">
-          <motion.p
+          <p
             className="text-gray-800 dark:text-white text-4xl md:text-6xl font-bold"
-            initial={{ opacity: 0, y: -10 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
           >
             My Projects.
-          </motion.p>
+          </p>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: isInView ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="h-2 bg-gradient-to-r from-red-500 to-red-600 w-24 md:w-40 mt-3 origin-left rounded-r-full"
           />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <p
             className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl"
           >
             A showcase of my recent work and projects I&apos;ve contributed to.
-          </motion.p>
+          </p>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+        <div
           className="relative z-10"
         >
           <ListProjects />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

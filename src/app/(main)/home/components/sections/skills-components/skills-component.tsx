@@ -46,7 +46,7 @@ const categories = {
 
 const Skills = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { margin: "-100px" });
 
     const skillsByCategory = skills.reduce((acc, skill) => {
         if (!acc[skill.category]) {
@@ -55,21 +55,6 @@ const Skills = () => {
         acc[skill.category].push(skill);
         return acc;
     }, {} as Record<string, Skill[]>);
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-    };
 
     const getCategoryColor = (category: string): string => {
         switch(category) {
@@ -101,25 +86,19 @@ const Skills = () => {
                 <div className="space-y-12 w-full max-w-5xl mx-auto">
                     {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
                         <div key={category} className="space-y-5">
-                            <motion.div
+                            <div
                                 className="flex items-center space-x-3"
-                                initial={{ opacity: 0, x: -10 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-                                transition={{ duration: 0.5 }}
                             >
                                 <div className={`h-6 w-1.5 rounded-full bg-gradient-to-b ${getCategoryColor(category)}`}></div>
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                                     {categories[category as keyof typeof categories]}
                                 </h3>
-                            </motion.div>
-                            <motion.div
+                            </div>
+                            <div
                                 className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6"
-                                variants={containerVariants}
-                                initial="hidden"
-                                animate={isInView ? "show" : "hidden"}
                             >
                                 {categorySkills.map((skill) => (
-                                    <motion.div key={skill.name} variants={itemVariants}>
+                                    <div key={skill.name}>
                                         <Tooltip>
                                             <TooltipTrigger asChild>
                                                 <Card className={`hover:shadow-xl transition-all duration-300 hover:scale-[1.05] bg-white/5 dark:bg-gray-900/20 hover:shadow-red-900/20 dark:border-gray-800 overflow-hidden group relative ${getCategoryHoverEffect(category)}`}>
@@ -141,9 +120,9 @@ const Skills = () => {
                                                 <p>{skill.name}</p>
                                             </TooltipContent>
                                         </Tooltip>
-                                    </motion.div>
+                                    </div>
                                 ))}
-                            </motion.div>
+                            </div>
                         </div>
                     ))}
                 </div>

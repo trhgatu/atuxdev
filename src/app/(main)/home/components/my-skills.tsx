@@ -36,14 +36,11 @@ const MySkills = () => {
                         Technologies and tools I&apos;ve worked with and am proficient in.
                     </motion.p>
                 </div>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
+                <div
                     className="relative z-10"
                 >
                     <Skills />
-                </motion.div>
+                </div>
             </div>
         </section>
     );

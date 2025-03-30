@@ -8,7 +8,7 @@ import { useRef } from 'react';
 
 export default function AboutSection() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { margin: "-100px" });
 
     return (
         <section ref={ref} className="py-16 px-8 relative">
@@ -17,31 +17,19 @@ export default function AboutSection() {
 
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
                 <div className="w-full md:w-1/2 md:text-left">
-                    <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-                        transition={{ duration: 0.5 }}
+                    <div
                     >
-                        <motion.p
+                        <p
                             className="text-white text-4xl md:text-6xl font-bold"
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-                            transition={{ duration: 0.5 }}
                         >
                             About me.
-                        </motion.p>
-                        <motion.div
-                            initial={{ scaleX: 0 }}
-                            animate={{ scaleX: isInView ? 1 : 0 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        </p>
+                        <div
                             className="h-2 bg-gradient-to-r from-red-500 to-red-600 w-24 md:w-40 mt-3 origin-left rounded-r-full"
                         />
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                    <div
                     >
                         <p className="mt-6 text-slate-200">
                             Hi, I&apos;m <span className="font-semibold text-red-600">Anh Tu</span>.
@@ -50,32 +38,29 @@ export default function AboutSection() {
                         </p>
 
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <motion.div
+                            <div
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
-                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             >
                                 <FaCode className="text-red-500 text-2xl mb-2" />
                                 <h3 className="text-white font-medium mb-1">Frontend</h3>
                                 <p className="text-sm text-slate-200">Next.js, React, TypeScript</p>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
-                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             >
                                 <FaServer className="text-red-500 text-2xl mb-2" />
                                 <h3 className="text-white font-medium mb-1">Backend</h3>
                                 <p className="text-sm text-slate-200">Node.js, Express, REST API</p>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
-                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             >
                                 <FaDatabase className="text-red-500 text-2xl mb-2" />
                                 <h3 className="text-white font-medium mb-1">Database</h3>
                                 <p className="text-sm text-slate-200">MongoDB</p>
-                            </motion.div>
+                            </div>
                         </div>
 
                         <p className="mt-6 text-slate-200">
@@ -85,50 +70,36 @@ export default function AboutSection() {
                         </p>
 
                         <div className="mt-8 space-y-3">
-                            <motion.div
+                            <div
                                 className="flex items-center text-slate-200"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                transition={{ duration: 0.3, delay: 0.3 }}
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaMapMarkerAlt className="text-red-500" />
                                 </div>
                                 <span>Ho Chi Minh City, Vietnam</span>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 className="flex items-center text-slate-200"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                transition={{ duration: 0.3, delay: 0.4 }}
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaEnvelope className="text-red-500" />
                                 </div>
                                 <span>trananhtu1112003@gmail.com</span>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 className="flex items-center text-slate-200"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                transition={{ duration: 0.3, delay: 0.5 }}
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaCalendarAlt className="text-red-500" />
                                 </div>
                                 <span>Born on November 11, 2003</span>
-                            </motion.div>
+                            </div>
                         </div>
 
-                        <motion.div
+                        <div
                             className="mt-8"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
                         >
                             <Link
                                 href="/assets/resume.pdf"
@@ -138,15 +109,12 @@ export default function AboutSection() {
                                 <FaDownload className="mr-2" />
                                 Download CV
                             </Link>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
 
-                <motion.div
+                <div
                     className="w-full md:w-1/2 flex justify-center md:justify-end"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
                         <div className="absolute inset-0 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-2xl -z-10"></div>
@@ -165,7 +133,7 @@ export default function AboutSection() {
                             <p className="text-xs opacity-80">Passionate about creating impactful web experiences</p>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

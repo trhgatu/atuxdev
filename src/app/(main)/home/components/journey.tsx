@@ -6,16 +6,13 @@ import Image from 'next/image';
 
 const JourneySection = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { margin: "-100px" });
 
     const data = [
         {
             title: 'Currently',
             content: (
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
+                <div
                     className="relative"
                 >
                     <div className="absolute -left-12 top-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center shadow-lg shadow-red-500/20">
@@ -40,16 +37,13 @@ const JourneySection = () => {
                             2024 - Present
                         </div>
                     </div>
-                </motion.div>
+                </div>
             ),
         },
         {
             title: '2024',
             content: (
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                <div
                     className="relative"
                 >
                     <div className="absolute -left-12 top-0 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center shadow-lg shadow-red-600/20">
@@ -79,16 +73,13 @@ const JourneySection = () => {
                             Jan 2024 - May 2024
                         </div>
                     </div>
-                </motion.div>
+                </div>
             ),
         },
         {
             title: '2021 - 2023',
             content: (
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                <div
                     className="relative"
                 >
                     <div className="absolute -left-12 top-0 w-8 h-8 bg-red-700 rounded-full flex items-center justify-center shadow-lg shadow-red-700/20">
@@ -139,7 +130,7 @@ const JourneySection = () => {
                             Sep 2021 - Jun 2023
                         </div>
                     </div>
-                </motion.div>
+                </div>
             ),
         },
     ];
@@ -162,34 +153,22 @@ const JourneySection = () => {
 
             <div className="flex max-w-5xl flex-col gap-10 mx-auto">
                 <div className="w-full">
-                    <motion.p
+                    <p
                         className="text-white text-4xl md:text-6xl font-bold"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-                        transition={{ duration: 0.5 }}
                     >
                         My Journey.
-                    </motion.p>
-                    <motion.div
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: isInView ? 1 : 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    </p>
+                    <div
                         className="h-2 bg-gradient-to-r from-red-500 to-red-600 w-24 md:w-40 mt-3 origin-left rounded-r-full"
                     />
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                    <p
                         className="mt-4 text-gray-300 max-w-2xl"
                     >
                         My professional path and educational background that shaped who I am today.
-                    </motion.p>
+                    </p>
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
+                <div
                     className="relative z-10"
                 >
                     <Card className="bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border-gray-800 overflow-hidden shadow-xl hover:shadow-red-900/20 transition-all duration-300">
@@ -197,7 +176,7 @@ const JourneySection = () => {
                             <Timeline data={data} />
                         </div>
                     </Card>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
