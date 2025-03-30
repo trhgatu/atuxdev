@@ -2,13 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
 import { FaDownload, FaEnvelope, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaServer, FaDatabase } from 'react-icons/fa';
 import { useRef } from 'react';
 
 export default function AboutSection() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-100px" });
 
     return (
         <section ref={ref} className="py-16 px-8 relative">

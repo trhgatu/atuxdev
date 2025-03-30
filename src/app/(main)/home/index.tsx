@@ -9,9 +9,9 @@ import MySkills from "@/src/app/(main)/home/components/my-skills";
 export function HomePage() {
   return (
     <>
-      {/* <section id="banner" className="h-screen">
+      <section id="banner" className="h-screen">
         <BannerSection />
-      </section> */}
+      </section>
       <section className="py-28 bg-[#202020]" id="about">
         <AboutSection />
       </section>

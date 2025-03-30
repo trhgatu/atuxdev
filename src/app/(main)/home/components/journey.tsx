@@ -1,12 +1,10 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { Timeline } from '@/src/shared/components/landing/time-line';
 import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 
 const JourneySection = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-100px" });
 
     const data = [
         {

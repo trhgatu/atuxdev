@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import ListProjects from "@/src/app/(main)/home/components/sections/list-projects-components/list-projects";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <section ref={ref} id="projects" className="px-6 py-16 relative">
@@ -29,10 +27,7 @@ const ProjectsSection = () => {
           >
             My Projects.
           </p>
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: isInView ? 1 : 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div
             className="h-2 bg-gradient-to-r from-red-500 to-red-600 w-24 md:w-40 mt-3 origin-left rounded-r-full"
           />
           <p
