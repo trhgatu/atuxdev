@@ -12,16 +12,16 @@ export function HomePage() {
       <section id="banner" className="h-screen">
         <Banner />
       </section>
-      <section className="py-28" id="about">
+      <section className="py-20" id="about">
         <About />
       </section>
-      <section className="py-28" id="skills">
+      <section className="py-16" id="skills">
         <MySkills />
       </section>
-      <section className="py-28" id="journey">
+      <section className="py-16" id="journey">
         <Journey />
       </section>
-      <section className="py-28" id="projects">
+      <section className="py-16" id="projects">
         <Projects />
       </section>
     </>

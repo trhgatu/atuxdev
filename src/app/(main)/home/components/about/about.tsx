@@ -18,7 +18,7 @@ export default function About() {
                     <div
                     >
                         <p
-                            className="text-white text-4xl md:text-6xl font-bold"
+                            className=" text-4xl md:text-6xl font-bold"
                         >
                             About me.
                         </p>
@@ -29,7 +29,7 @@ export default function About() {
 
                     <div
                     >
-                        <p className="mt-6 text-slate-200">
+                        <p className="mt-6 ">
                             Hi, I&apos;m <span className="font-semibold text-red-600">Anh Tu</span>.
                             I&apos;m passionate about <span className="italic">web development</span> and aspire to
                             <span className="italic"> become a full-stack developer</span>.
@@ -40,28 +40,28 @@ export default function About() {
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
                             >
                                 <FaCode className="text-red-500 text-2xl mb-2" />
-                                <h3 className="text-white font-medium mb-1">Frontend</h3>
-                                <p className="text-sm text-slate-200">Next.js, React, TypeScript</p>
+                                <h3 className=" font-medium mb-1">Frontend</h3>
+                                <p className="text-sm ">Next.js, React, TypeScript</p>
                             </div>
 
                             <div
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
                             >
                                 <FaServer className="text-red-500 text-2xl mb-2" />
-                                <h3 className="text-white font-medium mb-1">Backend</h3>
-                                <p className="text-sm text-slate-200">Node.js, Express, REST API</p>
+                                <h3 className=" font-medium mb-1">Backend</h3>
+                                <p className="text-sm ">Node.js, Express, REST API</p>
                             </div>
 
                             <div
                                 className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
                             >
                                 <FaDatabase className="text-red-500 text-2xl mb-2" />
-                                <h3 className="text-white font-medium mb-1">Database</h3>
-                                <p className="text-sm text-slate-200">MongoDB</p>
+                                <h3 className=" font-medium mb-1">Database</h3>
+                                <p className="text-sm ">MongoDB</p>
                             </div>
                         </div>
 
-                        <p className="mt-6 text-slate-200">
+                        <p className="mt-6 ">
                             My goal is to build scalable, efficient, and user-centric applications that solve real-world problems.
                             I&apos;m always eager to expand my knowledge, embrace challenges, and collaborate with
                             others to deliver impactful projects.
@@ -69,7 +69,7 @@ export default function About() {
 
                         <div className="mt-8 space-y-3">
                             <div
-                                className="flex items-center text-slate-200"
+                                className="flex items-center "
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaMapMarkerAlt className="text-red-500" />
@@ -78,7 +78,7 @@ export default function About() {
                             </div>
 
                             <div
-                                className="flex items-center text-slate-200"
+                                className="flex items-center "
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaEnvelope className="text-red-500" />
@@ -87,7 +87,7 @@ export default function About() {
                             </div>
 
                             <div
-                                className="flex items-center text-slate-200"
+                                className="flex items-center "
                             >
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
                                     <FaCalendarAlt className="text-red-500" />
@@ -102,7 +102,7 @@ export default function About() {
                             <Link
                                 href="/assets/resume.pdf"
                                 target="_blank"
-                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-lg transition-all duration-300 shadow-md"
+                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700  rounded-lg transition-all duration-300 shadow-md"
                             >
                                 <FaDownload className="mr-2" />
                                 Download CV
@@ -126,7 +126,7 @@ export default function About() {
                         />
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                        <div className="absolute bottom-4 left-4 right-4 ">
                             <p className="text-sm font-medium">Full Stack Developer</p>
                             <p className="text-xs opacity-80">Passionate about creating impactful web experiences</p>
                         </div>

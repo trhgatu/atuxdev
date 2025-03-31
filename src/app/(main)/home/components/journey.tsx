@@ -152,7 +152,7 @@ const Journey = () => {
             <div className="flex max-w-5xl flex-col gap-10 mx-auto">
                 <div className="w-full">
                     <p
-                        className="text-white text-4xl md:text-6xl font-bold"
+                        className=" text-4xl md:text-6xl font-bold"
                     >
                         My Journey.
                     </p>
@@ -160,7 +160,7 @@ const Journey = () => {
                         className="h-2 bg-gradient-to-r from-red-500 to-red-600 w-24 md:w-40 mt-3 origin-left rounded-r-full"
                     />
                     <p
-                        className="mt-4 text-gray-300 max-w-2xl"
+                        className="mt-4  max-w-2xl"
                     >
                         My professional path and educational background that shaped who I am today.
                     </p>
