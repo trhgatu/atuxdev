@@ -91,7 +91,7 @@ const ListProjects = () => {
                                         <Tooltip key={index}>
                                             <TooltipTrigger>
                                                 <motion.div
-                                                    className="h-10 w-10 transition-all duration-200 p-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full border border-gray-700 overflow-hidden relative group"
+                                                    className="h-10 w-10 transition-all duration-200 p-2 text-card-foreground hover:bg-gray-200 dark:hover:bg-gray-700 text-white rounded-full border border-gray-300 dark:border-gray-700 overflow-hidden relative group"
                                                     whileHover={{ y: -3, scale: 1.1, rotate: 5 }}
                                                 >
                                                     {/* Shimmer effect */}
