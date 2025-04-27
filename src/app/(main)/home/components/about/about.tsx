@@ -37,7 +37,7 @@ export default function About() {
 
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div
-                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
+                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  rounded-lg"
                             >
                                 <FaCode className="text-red-500 text-2xl mb-2" />
                                 <h3 className=" font-medium mb-1">Frontend</h3>
@@ -45,7 +45,7 @@ export default function About() {
                             </div>
 
                             <div
-                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
+                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  rounded-lg"
                             >
                                 <FaServer className="text-red-500 text-2xl mb-2" />
                                 <h3 className=" font-medium mb-1">Backend</h3>
@@ -53,7 +53,7 @@ export default function About() {
                             </div>
 
                             <div
-                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-lg"
+                                className="p-4 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  rounded-lg"
                             >
                                 <FaDatabase className="text-red-500 text-2xl mb-2" />
                                 <h3 className=" font-medium mb-1">Database</h3>
@@ -71,7 +71,7 @@ export default function About() {
                             <div
                                 className="flex items-center "
                             >
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  mr-4">
                                     <FaMapMarkerAlt className="text-red-500" />
                                 </div>
                                 <span>Ho Chi Minh City, Vietnam</span>
@@ -80,7 +80,7 @@ export default function About() {
                             <div
                                 className="flex items-center "
                             >
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  mr-4">
                                     <FaEnvelope className="text-red-500" />
                                 </div>
                                 <span>trananhtu1112003@gmail.com</span>
@@ -89,7 +89,7 @@ export default function About() {
                             <div
                                 className="flex items-center "
                             >
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 mr-4">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  mr-4">
                                     <FaCalendarAlt className="text-red-500" />
                                 </div>
                                 <span>Born on November 11, 2003</span>
@@ -104,8 +104,8 @@ export default function About() {
                                 target="_blank"
                                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700  rounded-lg transition-all duration-300 shadow-md"
                             >
-                                <FaDownload className="mr-2" />
-                                Download CV
+                                <FaDownload className="mr-2 text-white" />
+                                <span className='text-white'>Download CV</span>
                             </Link>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ export default function About() {
                     className="w-full md:w-1/2 flex justify-center md:justify-end"
                 >
                     <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border border-gray-800 rounded-2xl -z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  rounded-2xl -z-10"></div>
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl blur opacity-30 animate-pulse"></div>
 
                         <Image
@@ -127,8 +127,8 @@ export default function About() {
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4 ">
-                            <p className="text-sm font-medium">Full Stack Developer</p>
-                            <p className="text-xs opacity-80">Passionate about creating impactful web experiences</p>
+                            <p className="text-sm text-white font-medium">Full Stack Developer</p>
+                            <p className="text-xs text-white opacity-80">Passionate about creating impactful web experiences</p>
                         </div>
                     </div>
                 </div>

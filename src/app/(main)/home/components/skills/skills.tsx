@@ -33,6 +33,7 @@ const skills: Skill[] = [
     { name: "Figma", icon: "figma", category: "tools" },
     { name: "Redux", icon: "redux", category: "frontend" },
     { name: "Sass", icon: "sass", category: "frontend" },
+    { name: "Firebase", icon: "firebase", category: "database" },
 ];
 
 const categories = {
@@ -55,7 +56,7 @@ const Skills = () => {
     }, {} as Record<string, Skill[]>);
 
     const getCategoryColor = (category: string): string => {
-        switch(category) {
+        switch (category) {
             case 'frontend': return 'from-red-500 to-red-600';
             case 'backend': return 'from-red-600 to-red-700';
             case 'database': return 'from-red-500 to-rose-600';
@@ -65,7 +66,7 @@ const Skills = () => {
         }
     };
     const getCategoryHoverEffect = (category: string): string => {
-        switch(category) {
+        switch (category) {
             case 'frontend': return 'group-hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]';
             case 'backend': return 'group-hover:shadow-[0_0_15px_rgba(220,38,38,0.5)]';
             case 'database': return 'group-hover:shadow-[0_0_15px_rgba(225,29,72,0.5)]';
