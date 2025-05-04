@@ -26,6 +26,7 @@ const skills: Skill[] = [
     { name: "MongoDB", icon: "mongodb", category: "database" },
     { name: "MySQL", icon: "mysql", category: "database" },
     { name: "GraphQL", icon: "graphql", category: "backend" },
+    { name: "Redis", icon: "redis", category: "backend" },
     { name: "Git", icon: "git", category: "tools" },
     { name: "VSCode", icon: "vscode", category: "tools" },
     { name: "Postman", icon: "postman", category: "tools" },
@@ -33,7 +34,6 @@ const skills: Skill[] = [
     { name: "Figma", icon: "figma", category: "tools" },
     { name: "Redux", icon: "redux", category: "frontend" },
     { name: "Sass", icon: "sass", category: "frontend" },
-    { name: "Firebase", icon: "firebase", category: "database" },
 ];
 
 const categories = {

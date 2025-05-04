@@ -98,16 +98,8 @@ const SideNavigation = () => {
                         transition={{ duration: 0.2 }}
                     >
                         {activeSection === section.id && (
-                            <motion.div
+                            <div
                                 className="absolute inset-0 bg-gradient-to-r from-red-500 to-rose-500 opacity-80"
-                                animate={{
-                                    rotate: [0, 360],
-                                }}
-                                transition={{
-                                    duration: 8,
-                                    repeat: Infinity,
-                                    ease: "linear"
-                                }}
                             />
                         )}
                     </motion.button>
