@@ -119,7 +119,7 @@ export const ProjectDetailPage = () => {
                                 className="px-4 py-2 bg-[#24292e] hover:bg-[#1b1f23] transition-all duration-300 text-white rounded-md flex items-center space-x-2 shadow-md hover:scale-105"
                             >
                                 <FaGithub />
-                                <span>GitHub</span>
+                                <span className="hidden lg:inline">GitHub</span>
                             </Link>
                             <Link
                                 href={project.projectLink}
@@ -128,7 +128,7 @@ export const ProjectDetailPage = () => {
                                 className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-300 text-white rounded-md flex items-center space-x-2 shadow-md hover:scale-105"
                             >
                                 <FaExternalLinkAlt />
-                                <span>Live Demo</span>
+                                <span className="hidden lg:inline">Live Demo</span>
                             </Link>
                         </div>
                     </motion.div>
