@@ -255,7 +255,7 @@ export const ProjectDetailPage = () => {
                                             <span>About This Project</span>
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="pt-0">
                                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                             {project.description || "This is an innovative project that showcases modern web development techniques and best practices. Built with cutting-edge technologies, it demonstrates proficiency in full-stack development, responsive design, and user experience optimization."}
                                         </p>
@@ -300,9 +300,9 @@ export const ProjectDetailPage = () => {
                                             Tech stack and tools used in this project
                                         </CardDescription>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="pt-0">
                                         <TooltipProvider>
-                                            <div className="grid grid-cols-4 gap-3">
+                                            <div className="grid grid-cols-5 gap-3">
                                                 {project.technologies.map((tech, index) => (
                                                     <Tooltip key={index}>
                                                         <TooltipTrigger>
@@ -311,7 +311,7 @@ export const ProjectDetailPage = () => {
                                                                 whileHover={{ y: -3, scale: 1.1 }}
                                                                 whileTap={{ scale: 0.95 }}
                                                             >
-                                                                <div className="absolute -inset-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+                                                                <div className="absolute -inset-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                                                 <div className="relative z-10">
                                                                     <StackIcon name={tech.icon} />
                                                                 </div>
@@ -325,17 +325,16 @@ export const ProjectDetailPage = () => {
                                             </div>
                                         </TooltipProvider>
 
-                                        <div className="mt-4 flex flex-wrap gap-2">
+                                       {/*  <div className="mt-4 flex flex-wrap gap-2">
                                             {project.technologies.map((tech, index) => (
-                                                <Badge
+                                                <span
+                                                 className="h-4"
                                                     key={index}
-                                                    variant="secondary"
-                                                    className="bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800"
                                                 >
                                                     {tech.name}
-                                                </Badge>
+                                                </span>
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </CardContent>
                                 </Card>
                             </motion.div>
@@ -350,7 +349,7 @@ export const ProjectDetailPage = () => {
                                     <CardHeader>
                                         <CardTitle className="text-lg">Project Details</CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+                                    <CardContent className="space-y-4 pt-0">
                                         <div className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
                                             <span className="text-gray-600 dark:text-gray-400">Duration</span>
                                             <span className="font-medium text-gray-800 dark:text-white">{project.duration}</span>
@@ -385,7 +384,7 @@ export const ProjectDetailPage = () => {
                                     <CardHeader>
                                         <CardTitle className="text-lg">Quick Actions</CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-3">
+                                    <CardContent className="space-y-3 pt-0">
                                         <Link
                                             href={project.githubLink}
                                             target="_blank"
