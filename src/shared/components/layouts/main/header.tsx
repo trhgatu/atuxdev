@@ -141,7 +141,7 @@ const Header = () => {
             </div>
             <nav className="hidden md:flex">
               <ul className="flex space-x-6 items-center">
-                {["about", "skills", "journey", "projects"].map((section) => (
+                {["about", "skills", "journey", "projects", "My CV"].map((section) => (
                   <li key={section}>
                     <button
                       onClick={() => scrollToSection(section)}
@@ -250,7 +250,7 @@ const Header = () => {
 
                   <div className="flex-1 py-8 px-6 overflow-y-auto dark:bg-[#202020] bg-white">
                     <motion.div className="space-y-1">
-                      {["about", "skills", "journey", "projects"].map((section, index) => (
+                      {["about", "skills", "journey", "projects", "My CV"].map((section, index) => (
                         <motion.button
                           key={section}
                           variants={itemVariants}

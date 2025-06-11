@@ -5,6 +5,9 @@ export interface Technology {
 
   export interface Project {
     id: string;
+    _id: string;
+    description: string;
+    status: string;
     name: string;
     slug: string;
     technologies: Technology[];
