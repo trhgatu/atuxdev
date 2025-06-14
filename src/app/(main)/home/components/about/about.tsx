@@ -14,7 +14,7 @@ export default function About() {
             <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-red-600/10 to-orange-500/5 rounded-full blur-3xl -z-10"></div>
 
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                <div className="w-full md:w-1/2 md:text-left">
+                <div className="w-full">
                     <div
                     >
                         <p
@@ -107,28 +107,6 @@ export default function About() {
                                 <FaDownload className="mr-2 text-white" />
                                 <span className='text-white'>Download CV</span>
                             </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className="w-full md:w-1/2 flex justify-center md:justify-end"
-                >
-                    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/5 to-gray-900/20 backdrop-blur-sm border  rounded-2xl -z-10"></div>
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl blur opacity-30 animate-pulse"></div>
-
-                        <Image
-                            src="/assets/image/tu2.jpg"
-                            alt="Anh Tu"
-                            fill
-                            className="object-cover rounded-2xl p-1"
-                        />
-
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 right-4 ">
-                            <p className="text-sm text-white font-medium">Full Stack Developer</p>
-                            <p className="text-xs text-white opacity-80">Passionate about creating impactful web experiences</p>
                         </div>
                     </div>
                 </div>
