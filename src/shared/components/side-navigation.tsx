@@ -1,163 +1,148 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type Section = {
-    id: string;
-    name: string;
+  id: string;
+  name: string;
+  icon?: string;
 };
 
 const sections: Section[] = [
-    { id: "banner", name: "Home" },
-    { id: "about", name: "About" },
-    { id: "skills", name: "Skills" },
-    { id: "journey", name: "Journey" },
-    { id: "projects", name: "Projects" },
+  { id: "banner", name: "Home" },
+  { id: "about", name: "About" },
+  { id: "skills", name: "Skills" },
+  { id: "journey", name: "Journey" },
+  { id: "projects", name: "Projects" },
 ];
 
-const SideNavigation = () => {
-    const [activeSection, setActiveSection] = useState("banner");
-    const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-    const [hoverSection, setHoverSection] = useState<string | null>(null);
+export const SideNavigation = () => {
+  const [activeSection, setActiveSection] = useState("banner");
+  const [isVisible, setIsVisible] = useState(true);
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            setIsVisible(scrollY < lastScrollY || scrollY < 100);
-            setLastScrollY(scrollY);
-            const viewportHeight = window.innerHeight;
-            const scrollPosition = window.scrollY + viewportHeight / 3;
+  const handleScroll = useCallback(() => {
+    const scrollY = window.scrollY;
+    setIsVisible(scrollY < 200 || scrollY < window.innerHeight * 0.1);
 
-            for (const section of sections) {
-                const element = document.getElementById(section.id);
-                if (element) {
-                    const { offsetTop, offsetHeight } = element;
-                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                        setActiveSection(section.id);
-                        break;
-                    }
-                }
-            }
-        };
+    // Throttled section detection
+    const viewportHeight = window.innerHeight;
+    const scrollPosition = scrollY + viewportHeight * 0.3;
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
-
-    const scrollToSection = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-            setActiveSection(id);
+    for (const section of sections) {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const { offsetTop, offsetHeight } = element;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          setActiveSection(section.id);
+          break;
         }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    const throttledScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(handleScroll, 10);
     };
 
-    return (
-        <motion.div
-            className="fixed right-8 top-1/3 transform -translate-y-1/2 z-40 hidden lg:flex flex-col items-center space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{
-                opacity: isVisible ? 1 : 0.3,
-                x: 0,
-                scale: isVisible ? 1 : 0.9
-            }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-        >
-            <motion.div
-                className="absolute -z-10 w-[120%] h-[120%] rounded-full bg-gradient-to-br from-red-500/10 to-rose-500/5 blur-xl"
-                animate={{
-                    scale: [1, 1.05, 1],
-                    opacity: [0.5, 0.7, 0.5],
-                }}
-                transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                }}
-            />
+    window.addEventListener("scroll", throttledScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [handleScroll]);
 
-            {sections.map((section) => (
-                <div
-                    key={section.id}
-                    className="relative group"
-                    onMouseEnter={() => setHoverSection(section.id)}
-                    onMouseLeave={() => setHoverSection(null)}
-                >
-                    <motion.button
-                        onClick={() => scrollToSection(section.id)}
-                        className={`w-4 h-4 rounded-full relative overflow-hidden ${activeSection === section.id
-                                ? "shadow-[0_0_10px_2px_rgba(239,68,68,0.6)]"
-                                : "shadow-sm"
-                            }`}
-                        whileHover={{ scale: 1.3 }}
-                        animate={{
-                            backgroundColor: activeSection === section.id ? "#ef4444" : "#d1d5db",
-                        }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        {activeSection === section.id && (
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r from-red-500 to-rose-500 opacity-80"
-                            />
-                        )}
-                    </motion.button>
+  const scrollToSection = useCallback((id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
-                    <motion.span
-                        className="absolute right-7 translate-x-[-100%] opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-sm font-medium bg-white/90 dark:bg-gray-800/90 px-3 py-1.5 rounded-md shadow-lg border border-red-100 dark:border-red-900/30"
-                        initial={{ x: -5, opacity: 0 }}
-                        animate={{
-                            x: hoverSection === section.id ? 0 : -5,
-                            opacity: hoverSection === section.id ? 1 : 0
-                        }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        <span className="text-red-500 dark:text-red-400">{section.name}</span>
+  return (
+    <motion.nav
+      className={cn(
+        "fixed right-8 top-1/2 -translate-y-1/2 z-40",
+        "hidden lg:flex flex-col items-center",
+        "transition-opacity duration-300",
+        isVisible ? "opacity-100" : "opacity-30"
+      )}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: isVisible ? 1 : 0.3, x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Background gradient */}
+      <div className="absolute inset-0 w-16 h-full bg-gradient-to-b from-red-500/5 via-red-500/10 to-red-500/5 rounded-full blur-sm -z-10" />
 
-                        <span className="absolute right-[-6px] top-1/2 transform -translate-y-1/2 w-2 h-2 rotate-45 bg-white dark:bg-gray-800 border-r border-t border-red-100 dark:border-red-900/30"></span>
-                    </motion.span>
+      {/* Connection line */}
+      <div className="absolute left-1/2 top-4 bottom-4 w-px bg-gradient-to-b from-transparent via-red-500/30 to-transparent -translate-x-1/2 -z-10" />
 
-                    {activeSection === section.id && (
-                        <motion.span
-                            layoutId="activeIndicator"
-                            className="absolute inset-[-3px] rounded-full border-2 border-red-500"
-                            initial={false}
-                            animate={{
-                                boxShadow: ["0 0 0px rgba(239,68,68,0.3)", "0 0 8px rgba(239,68,68,0.6)", "0 0 0px rgba(239,68,68,0.3)"]
-                            }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 30,
-                                boxShadow: {
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    repeatType: "reverse"
-                                }
-                            }}
-                        />
-                    )}
-                </div>
-            ))}
+      <div className="flex flex-col space-y-4 py-4">
+        {sections.map((section, index) => {
+          const isActive = activeSection === section.id;
+          const isHovered = hoveredSection === section.id;
 
-            <motion.div
-                className="absolute left-1/2 top-0 bottom-0 w-[1px] -z-10 transform -translate-x-1/2"
-                style={{
-                    background: "linear-gradient(to bottom, transparent, #ef4444 30%, #ef4444 70%, transparent)"
-                }}
-                animate={{
-                    height: "100%",
-                    opacity: [0.3, 0.6, 0.3]
-                }}
-                transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse"
-                }}
-            />
-        </motion.div>
-    );
+          return (
+            <div
+              key={section.id}
+              className="relative group"
+              onMouseEnter={() => setHoveredSection(section.id)}
+              onMouseLeave={() => setHoveredSection(null)}
+            >
+              <motion.button
+                onClick={() => scrollToSection(section.id)}
+                className={cn(
+                  "relative w-3 h-3 rounded-full transition-all duration-200",
+                  "hover:scale-125 focus:outline-none focus:ring-2 focus:ring-red-500/50",
+                  isActive
+                    ? "bg-red-500 shadow-lg shadow-red-500/40"
+                    : "bg-gray-300 dark:bg-gray-600 hover:bg-red-400"
+                )}
+                whileTap={{ scale: 0.9 }}
+                aria-label={`Navigate to ${section.name}`}
+              >
+                {/* Active indicator ring */}
+                {isActive && (
+                  <motion.div
+                    className="absolute inset-[-4px] rounded-full border border-red-500/50"
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                )}
+              </motion.button>
+
+              {/* Tooltip */}
+              <AnimatePresence>
+                {isHovered && (
+                  <motion.div
+                    className="absolute right-full mr-3 top-1/2 -translate-y-1/2"
+                    initial={{ opacity: 0, x: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: 10, scale: 0.9 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <div className="bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 whitespace-nowrap">
+                      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                        {section.name}
+                      </span>
+                      {/* Tooltip arrow */}
+                      <div className="absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white dark:border-l-gray-800 border-y-[4px] border-y-transparent" />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          );
+        })}
+      </div>
+    </motion.nav>
+  );
 };
-
-export default SideNavigation;

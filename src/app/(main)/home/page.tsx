@@ -1,4 +1,3 @@
-import SideNavigation from '@/shared/components/side-navigation';
 import { HomePage } from '.';
 
 export const metadata = {
@@ -12,7 +11,6 @@ export const metadata = {
 function HomePageRoute() {
     return (
         <>
-            <SideNavigation />
             <HomePage />
         </>
     );
