@@ -96,13 +96,7 @@ export const ProjectDetailPage = () => {
 
             <div className="relative z-10 px-6 py-16">
                 <div className="max-w-6xl mx-auto">
-                    {/* Navigation */}
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="flex items-center justify-between mb-12"
-                    >
+                    <div className="flex items-center justify-between mb-12" >
                         <Link
                             href="/projects"
                             className="inline-flex items-center space-x-2 text-red-500 hover:text-red-600 transition-colors duration-200 group"
@@ -131,15 +125,10 @@ export const ProjectDetailPage = () => {
                                 <span className="hidden lg:inline">Live Demo</span>
                             </Link>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Header Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-center mb-16"
-                    >
+                    <div className="text-center mb-16" >
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
                             {project.name}
                         </h1>
@@ -159,17 +148,13 @@ export const ProjectDetailPage = () => {
                                 <span>{project.images.length} Images</span>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-8">
                             {/* Image Gallery */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                            >
+                            <div>
                                 <Card className="overflow-hidden backdrop-blur-sm border shadow-xl">
                                     <CardContent className="p-0">
                                         <div className="relative">
@@ -204,11 +189,10 @@ export const ProjectDetailPage = () => {
                                                     <button
                                                         key={index}
                                                         onClick={() => setSelectedImageIndex(index)}
-                                                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                                                            index === selectedImageIndex
-                                                                ? 'bg-white'
-                                                                : 'bg-white/50 hover:bg-white/75'
-                                                        }`}
+                                                        className={`w-2 h-2 rounded-full transition-all duration-200 ${index === selectedImageIndex
+                                                            ? 'bg-white'
+                                                            : 'bg-white/50 hover:bg-white/75'
+                                                            }`}
                                                     />
                                                 ))}
                                             </div>
@@ -223,11 +207,10 @@ export const ProjectDetailPage = () => {
                                             <button
                                                 key={index}
                                                 onClick={() => setSelectedImageIndex(index)}
-                                                className={`flex-shrink-0 relative overflow-hidden rounded-lg transition-all duration-200 ${
-                                                    index === selectedImageIndex
-                                                        ? 'ring-2 ring-red-500 ring-offset-2 ring-offset-gray-100 dark:ring-offset-gray-800'
-                                                        : 'hover:opacity-75'
-                                                }`}
+                                                className={`flex-shrink-0 relative overflow-hidden rounded-lg transition-all duration-200 ${index === selectedImageIndex
+                                                    ? 'ring-2 ring-red-500 ring-offset-2 ring-offset-gray-100 dark:ring-offset-gray-800'
+                                                    : 'hover:opacity-75'
+                                                    }`}
                                             >
                                                 <Image
                                                     src={image}
@@ -240,14 +223,10 @@ export const ProjectDetailPage = () => {
                                         ))}
                                     </div>
                                 )}
-                            </motion.div>
+                            </div>
 
                             {/* Project Description */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.3 }}
-                            >
+                            <div>
                                 <Card className="backdrop-blur-sm border shadow-xl">
                                     <CardHeader>
                                         <CardTitle className="flex items-center space-x-2">
@@ -282,17 +261,13 @@ export const ProjectDetailPage = () => {
                                         )} */}
                                     </CardContent>
                                 </Card>
-                            </motion.div>
+                            </div>
                         </div>
 
                         {/* Sidebar */}
                         <div className="space-y-8">
                             {/* Technologies */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.4 }}
-                            >
+                            <div>
                                 <Card className="backdrop-blur-sm border shadow-xl">
                                     <CardHeader>
                                         <CardTitle className="text-lg">Technologies Used</CardTitle>
@@ -306,16 +281,14 @@ export const ProjectDetailPage = () => {
                                                 {project.technologies.map((tech, index) => (
                                                     <Tooltip key={index}>
                                                         <TooltipTrigger>
-                                                            <motion.div
+                                                            <div
                                                                 className="h-12 w-12 p-3 transition-all duration-200 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-white rounded-lg border border-gray-300 dark:border-gray-600 overflow-hidden relative group cursor-pointer"
-                                                                whileHover={{ y: -3, scale: 1.1 }}
-                                                                whileTap={{ scale: 0.95 }}
                                                             >
                                                                 <div className="absolute -inset-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                                                 <div className="relative z-10">
                                                                     <StackIcon name={tech.icon} />
                                                                 </div>
-                                                            </motion.div>
+                                                            </div>
                                                         </TooltipTrigger>
                                                         <TooltipContent className="bg-gray-800 border-gray-700 text-white">
                                                             {tech.name}
@@ -325,7 +298,7 @@ export const ProjectDetailPage = () => {
                                             </div>
                                         </TooltipProvider>
 
-                                       {/*  <div className="mt-4 flex flex-wrap gap-2">
+                                        {/*  <div className="mt-4 flex flex-wrap gap-2">
                                             {project.technologies.map((tech, index) => (
                                                 <span
                                                  className="h-4"
@@ -337,14 +310,10 @@ export const ProjectDetailPage = () => {
                                         </div> */}
                                     </CardContent>
                                 </Card>
-                            </motion.div>
+                            </div>
 
                             {/* Project Info */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.5 }}
-                            >
+                            <div >
                                 <Card className="backdrop-blur-sm border shadow-xl">
                                     <CardHeader>
                                         <CardTitle className="text-lg">Project Details</CardTitle>
@@ -356,7 +325,7 @@ export const ProjectDetailPage = () => {
                                         </div>
                                         <div className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
                                             <span className="text-gray-600 dark:text-gray-400">Status</span>
-                                            <ProjectStatusBadge status={project.status}/>
+                                            <ProjectStatusBadge status={project.status} />
                                         </div>
                                         {/* <div className="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
                                             <span className="text-gray-600 dark:text-gray-400">Category</span>
@@ -372,14 +341,10 @@ export const ProjectDetailPage = () => {
                                         </div> */}
                                     </CardContent>
                                 </Card>
-                            </motion.div>
+                            </div>
 
                             {/* Quick Actions */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.6 }}
-                            >
+                            <div>
                                 <Card className="backdrop-blur-sm border shadow-xl">
                                     <CardHeader>
                                         <CardTitle className="text-lg">Quick Actions</CardTitle>
@@ -405,7 +370,7 @@ export const ProjectDetailPage = () => {
                                         </Link>
                                     </CardContent>
                                 </Card>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -414,17 +379,10 @@ export const ProjectDetailPage = () => {
             {/* Image Modal */}
             <AnimatePresence>
                 {isImageModalOpen && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                    <div
                         className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-                        onClick={() => setIsImageModalOpen(false)}
-                    >
-                        <motion.div
-                            initial={{ scale: 0.9 }}
-                            animate={{ scale: 1 }}
-                            exit={{ scale: 0.9 }}
+                        onClick={() => setIsImageModalOpen(false)}>
+                        <div
                             className="relative max-w-7xl max-h-[90vh]"
                             onClick={(e) => e.stopPropagation()}
                         >
@@ -458,8 +416,8 @@ export const ProjectDetailPage = () => {
                                     </button>
                                 </>
                             )}
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 )}
             </AnimatePresence>
         </div>
